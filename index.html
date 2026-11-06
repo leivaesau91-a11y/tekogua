@@ -1,0 +1,775 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TECNOPOZOS TPS GUATEMALA y CALDERAS KOGUA: soluciones en pozos de agua y calderas de biomasa.">
+<title>TECNOPOZOS TPS GUATEMALA | CALDERAS KOGUA</title>
+<style>
+:root{--bg:#07111f;--panel:#101f33;--panel2:#142941;--blue:#20a4e8;--cyan:#5bd4e8;--gold:#f1ad45;--text:#f5f8fc;--muted:#b9c7d8;--line:rgba(255,255,255,.12);--radius:20px;--shadow:0 20px 55px rgba(0,0,0,.28)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top,#142d49 0,#07111f 58%);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(1160px,92%);margin:auto}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(5,14,26,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+.brand-logos{display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0}
+.brand-logos img{width:46px;height:36px;object-fit:contain;background:#fff;border-radius:9px;padding:4px}
+.brand-logos img.logo-kogua{width:46px;height:32px;background:#fff}
+.brand small{display:block;color:var(--muted);font-size:.72rem;font-weight:500;letter-spacing:1px}
+.navlinks{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:11px 17px;font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.primary{background:linear-gradient(135deg,var(--blue),#1768b7);border-color:transparent;color:white}
+.gold{background:linear-gradient(135deg,#ffc66d,#d88920);border-color:transparent;color:#201506}
+.outline{background:rgba(255,255,255,.04)}
+.hero{text-align:center;padding:74px 0 44px}
+.eyebrow{display:inline-block;color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:clamp(2rem,5vw,4rem);line-height:1.08;max-width:900px;margin:16px auto}
+.hero p{max-width:740px;margin:0 auto 25px;color:var(--muted);font-size:1.08rem}
+.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:15px 0 72px}
+.company-card{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:440px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,rgba(25,49,75,.96),rgba(9,22,38,.98));box-shadow:var(--shadow)}
+.card-top{height:200px;position:relative;background:linear-gradient(135deg,#164d78,#0b1b2c);overflow:hidden}
+.card-top img{width:100%;height:100%;object-fit:cover;opacity:.72}
+.card-top:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,16,29,.92),transparent 75%)}
+.card-top h2{position:absolute;z-index:1;left:25px;bottom:16px;margin:0;font-size:clamp(1.4rem,3vw,2rem)}
+.card-body{padding:23px;display:flex;flex-direction:column;flex:1}
+.card-body p{color:var(--muted);margin:0 0 18px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tag{font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:5px 10px;color:#dce8f7}
+.card-body .btn{margin-top:auto;align-self:flex-start}
+.kogua .card-top{background:linear-gradient(135deg,#73501e,#171e28)}
+.kogua .eyebrow{color:var(--gold)}
+.section{padding:55px 0;border-top:1px solid var(--line)}
+.section h2{font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.15;margin:8px 0 14px}
+.section-intro{color:var(--muted);max-width:780px}
+.hidden{display:none!important}
+.back{margin:25px 0 0}
+.company-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:42px 0 55px}
+.company-hero h1{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.1;margin:10px 0 18px}
+.company-hero p{color:var(--muted)}
+.media-frame{border:1px solid var(--line);background:#02070d;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.media-frame video,.media-frame img{display:block;width:100%;max-height:430px;object-fit:cover}
+.media-note{font-size:.8rem;color:var(--muted);padding:9px 13px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:25px}
+.feature{padding:21px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035)}
+.feature .symbol{display:flex;align-items:center;justify-content:flex-start;height:62px;margin-bottom:8px;color:var(--blue)}
+.feature .symbol svg{width:58px;height:58px;display:block;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.feature .symbol svg .solid{fill:currentColor;stroke:none}
+#koguaView .feature .symbol{color:var(--gold)}
+.feature h3{margin:7px 0}
+.feature p{color:var(--muted);font-size:.94rem;margin:0}
+.contact-panel{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:25px;border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(120deg,rgba(32,164,232,.13),rgba(255,255,255,.03));margin-top:25px}
+.contact-panel p{color:var(--muted);margin:5px 0 0}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.footer{border-top:1px solid var(--line);padding:27px 0;color:var(--muted);font-size:.9rem}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.socials{display:flex;gap:12px;flex-wrap:wrap}
+.socials a{color:var(--muted)}
+/* Galerias independientes por empresa */
+.gallery-section{padding:55px 0;border-top:1px solid var(--line)}
+.gallery-section h2{font-size:clamp(1.7rem,3vw,2.4rem);margin:8px 0 10px}
+.gallery-description{color:var(--muted);margin-bottom:25px;max-width:780px}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:18px;align-items:start}
+.gallery-item{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.gallery-item img,.gallery-item video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:contain;background:#02070d;border-radius:12px}
+.gallery-item img{cursor:zoom-in}
+.gallery-caption{padding:12px 14px;color:var(--muted);font-size:.9rem;text-align:center}
+@media(max-width:760px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+@media(max-width:430px){.gallery-grid{grid-template-columns:1fr}.gallery-item{width:min(100%,340px);margin-inline:auto}}
+/* Asistente virtual */
+.chat-launch{position:fixed;right:20px;bottom:20px;z-index:40;width:62px;height:62px;border:0;border-radius:50%;background:linear-gradient(135deg,var(--blue),#1768b7);color:#fff;font-size:1.6rem;box-shadow:0 10px 30px #0008}
+.chat-box{position:fixed;right:20px;bottom:94px;width:min(365px,calc(100vw - 30px));height:475px;max-height:70vh;z-index:40;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#0b1828;box-shadow:var(--shadow)}
+.chat-head{padding:14px 16px;background:linear-gradient(135deg,#167fb7,#174b80);display:flex;justify-content:space-between;align-items:center;font-weight:800}
+.chat-head small{display:block;font-weight:400;opacity:.85}
+.chat-close{background:transparent;border:0;color:white;font-size:1.3rem}
+.chat-messages{padding:13px;overflow:auto;display:flex;flex-direction:column;gap:10px;flex:1}
+.bubble{max-width:90%;padding:10px 12px;border-radius:13px;background:#172b42;font-size:.92rem;white-space:pre-wrap}
+.bubble.user{align-self:flex-end;background:#146a9d}
+.quick{display:flex;gap:6px;flex-wrap:wrap;padding:0 12px 10px}
+.quick button{background:transparent;border:1px solid var(--line);color:#d9e9fa;border-radius:99px;padding:6px 9px;font-size:.77rem}
+.chat-form{display:flex;gap:7px;padding:11px;border-top:1px solid var(--line)}
+.chat-form input{min-width:0;flex:1;background:#13243a;border:1px solid var(--line);border-radius:99px;padding:11px;color:white;outline:none}
+.chat-form button{border:0;border-radius:50%;width:42px;background:var(--blue);color:white;font-size:1.1rem}
+.chat-avatar{width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:50%;background:linear-gradient(135deg,#7ee8fa,#1682c4);border:2px solid rgba(255,255,255,.75);box-shadow:0 4px 12px #0004}
+.chat-avatar svg{width:31px;height:31px}
+.chat-launch{display:flex;align-items:center;justify-content:center;padding:0}
+.chat-launch .chat-avatar{width:52px;height:52px;border:0}
+.chat-head-main{display:flex;align-items:center;gap:10px}
+@media(max-width:760px){
+.choice-grid,.company-hero{grid-template-columns:1fr}
+.company-hero{padding-top:25px}
+.feature-grid{grid-template-columns:1fr}
+.nav{align-items:flex-start}
+.navlinks .btn{padding:8px 11px;font-size:.84rem}
+.brand{font-size:.9rem}
+.brand-logos img{width:38px;height:31px}
+.brand-logos img.logo-kogua{width:38px;height:28px}
+.hero{padding-top:48px}
+.company-card{min-height:unset}
+.card-top{height:175px}
+}
+/* Selector de idioma integrado con el diseño */
+.language-overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(2,8,16,.88);backdrop-filter:blur(12px)}
+.language-dialog{width:min(680px,100%);padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(155deg,#142941,#07111f);box-shadow:var(--shadow)}
+.language-dialog h2{margin:0 0 8px;font-size:clamp(1.5rem,4vw,2.2rem)}
+.language-dialog p{color:var(--muted)}
+.language-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0}
+.lang-btn{border:1px solid var(--line);border-radius:12px;padding:12px;background:rgba(255,255,255,.04);color:var(--text);text-align:left}
+.lang-btn:hover{background:rgba(32,164,232,.16);border-color:var(--blue)}
+.language-note{font-size:.85rem}
+@media(max-width:430px){.language-grid{grid-template-columns:1fr}.language-dialog{padding:20px}}
+/* TEKOGUA es el protagonista; videos secundarios más pequeños debajo de los logos */
+.tekogua-main-media{width:100%;display:flex;justify-content:center;align-items:center}
+.tekogua-main-media .hero-media-wrap{width:min(1000px,94%);margin:0 auto 18px}
+.tekogua-main-media .hero-media-wrap video{max-height:520px;min-height:260px}
+.tekogua-companies{width:min(860px,92%);margin:18px auto 24px;display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap}
+.tekogua-company{display:flex;align-items:center;justify-content:center;gap:12px;text-align:left;font-weight:800;letter-spacing:.3px}
+.tekogua-company img{width:76px;height:60px;object-fit:contain;background:#fff;border-radius:12px;padding:6px;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.tekogua-secondary-media{width:min(860px,92%);margin:0 auto 28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.tekogua-secondary-media .hero-media-wrap{width:100%;margin:0;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.tekogua-secondary-media .hero-media-wrap video{min-height:120px;max-height:180px;aspect-ratio:16/9}
+.tekogua-secondary-media .hero-media-caption{padding:9px 12px;font-size:.82rem}
+@media(max-width:700px){.tekogua-companies{margin-top:14px;margin-bottom:18px;gap:14px}.tekogua-company{font-size:.82rem;max-width:100%}.tekogua-company img{width:62px;height:50px}.tekogua-main-media .hero-media-wrap video{min-height:190px;max-height:360px}.tekogua-secondary-media{grid-template-columns:1fr;gap:12px}.tekogua-secondary-media .hero-media-wrap{max-width:520px}.tekogua-secondary-media .hero-media-wrap video{min-height:130px;max-height:210px}}
+/* Nuevos módulos integrados manteniendo la identidad visual existente */
+.hero-media-wrap{width:min(860px,92%);margin:0 auto 52px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#142941,#07111f);box-shadow:var(--shadow)}
+.hero-media-wrap video,.hero-media-wrap img{display:block;width:100%;max-height:440px;min-height:230px;object-fit:cover}
+.hero-media-caption{padding:12px 18px;color:var(--muted);font-size:.92rem;text-align:center}
+.feature-grid-new{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:26px 0 0}
+.feature-new{border:1px solid var(--line);border-radius:16px;background:linear-gradient(155deg,rgba(25,49,75,.8),rgba(9,22,38,.95));padding:20px}
+.feature-new strong{display:block;margin-bottom:6px;color:var(--text)}.feature-new p{color:var(--muted);margin:0}
+.social-links-new{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+@media(max-width:700px){.feature-grid-new{grid-template-columns:1fr}.hero-media-wrap video,.hero-media-wrap img{min-height:180px}}
+</style>
+</head>
+<body>
+<div class="language-overlay" id="languageOverlay" role="dialog" aria-modal="true" aria-labelledby="languageTitle">
+  <div class="language-dialog">
+    <h2 id="languageTitle">¿En qué idioma deseas continuar?</h2>
+    <p id="languageIntro">Elige el idioma para navegar por la página y conversar con nuestro asistente.</p>
+    <div class="language-grid" id="languageGrid">
+      <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+      <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+      <button class="lang-btn" data-lang="ko">🇰🇷 한국어 · Coreano</button>
+      <button class="lang-btn" data-lang="pt">🇧🇷 Português</button>
+      <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+      <button class="lang-btn" data-lang="de">🇩🇪 Deutsch</button>
+      <button class="lang-btn" data-lang="it">🇮🇹 Italiano</button>
+      <button class="lang-btn" data-lang="zh">🇨🇳 中文 · Chino</button>
+      <button class="lang-btn" data-lang="ja">🇯🇵 日本語 · Japonés</button>
+      <button class="lang-btn" data-lang="ar">🇸🇦 العربية · Árabe</button>
+    </div>
+    <p class="language-note" id="languageNote">Puedes cambiar el idioma más adelante con el botón “Idioma”.</p>
+  </div>
+</div>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#inicio" onclick="showHome();return false;" aria-label="Inicio">
+      <span class="brand-logos">
+        <img src="logo.png" alt="Logo TECNOPOZOS TPS" onerror="this.style.display='none'">
+        <img class="logo-kogua" src="logo_kogua.png" alt="Logo CALDERAS KOGUA" onerror="this.style.display='none'">
+      </span>
+      <span>TPS GUATEMALA<small>TECNOPOZOS · CALDERAS KOGUA</small></span>
+    </a>
+    <nav class="navlinks">
+      <button class="btn outline" id="changeLanguage" onclick="openLanguage()">🌐 Idioma</button>
+      <a class="btn outline" href="#inicio" onclick="showHome();return false;" data-i18n="navHome">Inicio</a>
+      <a class="btn outline" href="contacto.html" data-i18n="navContact">Contacto</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section id="homeView">
+  <div class="tekogua-main-media" aria-label="Video principal de TEKOGUA">
+    <div class="hero-media-wrap">
+      <video id="tekogua" autoplay muted loop playsinline poster="tekogua.jpg">
+        <source src="tekogua.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+      <div class="hero-media-caption" id="heroMediaCaption" data-i18n="heroMedia">Tecnología y experiencia para tus proyectos.</div>
+    </div>
+  </div>
+  <div class="tekogua-companies" aria-label="Empresas de TEKOGUA">
+    <div class="tekogua-company">
+      <img src="logo.png" alt="Logo TECNOPOZOS TPS" onerror="this.style.display='none'">
+      <span>TECNOPOZOS TPS GUATEMALA</span>
+    </div>
+    <div class="tekogua-company">
+      <img src="logo_kogua.png" alt="Logo CALDERAS KOGUA" onerror="this.style.display='none'">
+      <span>CALDERAS KOGUA</span>
+    </div>
+  </div>
+  <div class="tekogua-secondary-media" aria-label="Videos complementarios de las empresas">
+    <div class="hero-media-wrap" aria-label="Video de introducción">
+      <video id="introVideo" autoplay muted loop playsinline poster="imagen_intro.jpg">
+        <source src="intro.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+      <div class="hero-media-caption">Video de presentación de TECNOPOZOS TPS</div>
+    </div>
+    <div class="hero-media-wrap" aria-label="Video de CALDERAS KOGUA">
+      <video id="calderas_kogua" autoplay muted loop playsinline poster="calderas_kogua.jpg">
+        <source src="calderas_kogua.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+      <div class="hero-media-caption">Video de presentación de CALDERAS KOGUA</div>
+    </div>
+  </div>
+  <div class="wrap hero" id="inicio">
+    <span class="eyebrow" data-i18n="heroEyebrow">Experiencia · Tecnología · Confianza</span>
+    <h1 data-i18n="heroTitle">Soluciones en pozos de agua y calderas de biomasa</h1>
+    <p data-i18n="heroText">Acompañamos tus proyectos con servicios técnicos, soluciones industriales y atención personalizada en Guatemala.</p>
+    <a class="btn primary" href="#empresas" data-i18n="seeServices">Conocer nuestras empresas ↓</a>
+  </div>
+  <div class="wrap choice-grid" id="empresas">
+    <article class="company-card">
+      <div class="card-top">
+        <img src="imagen_intro.jpg" alt="Proyecto de TECNOPOZOS" onerror="this.style.display='none'">
+        <h2>TECNOPOZOS TPS GUATEMALA</h2>
+      </div>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag" data-i18n="waterTag">Pozos de agua</span>
+          <span class="tag" data-i18n="wellsTitle">Perforación</span>
+          <span class="tag">Desarrollo de pozos</span>
+        </div>
+        <p data-i18n="wellsText">Soluciones para proyectos de abastecimiento de agua, con orientación técnica según las características y necesidades de cada proyecto.</p>
+        <button class="btn primary" onclick="showCompany('tecno')" data-i18n="enterTecno">Entrar a TECNOPOZOS →</button>
+      </div>
+    </article>
+    <article class="company-card kogua">
+      <div class="card-top">
+        <img src="calderas_kogua.jpg" alt="Caldera de biomasa Calderas Kogua" onerror="this.style.display='none'">
+        <h2>CALDERAS KOGUA</h2>
+      </div>
+      <div class="card-body">
+        <div class="tags">
+          <span class="tag" data-i18n="industryTag">Calderas de biomasa</span>
+          <span class="tag">Fabricacion</span>
+          <span class="tag">Instalacion</span>
+        </div>
+        <p data-i18n="boilersText">Alternativas de generación térmica mediante biomasa para procesos industriales y necesidades de energía térmica.</p>
+        <button class="btn gold" onclick="showCompany('kogua')" data-i18n="enterKogua">Entrar a CALDERAS KOGUA →</button>
+      </div>
+    </article>
+  </div>
+  <section class="section" id="contacto-general">
+    <div class="wrap">
+      <span class="eyebrow" data-i18n="contactUs">Atención personalizada</span>
+      <h2 data-i18n="contactTitle">¿Tiene un proyecto en mente?</h2>
+      <p class="section-intro" data-i18n="contactText">Comuníquese con nuestro equipo o envíe su solicitud de cotización a través del formulario.</p>
+      <div class="contact-panel">
+        <div>
+          <h3 data-i18n="contactQuoteTitle">Solicite una cotización personalizada</h3>
+          <p data-i18n="contactQuoteText">Elija con quien desea comunicarse. Puede consultar por TECNOPOZOS TPS GUATEMALA o por CALDERAS KOGUA.</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="contacto.html">📞 Ver todos los contactos</a>
+          <a class="btn primary" href="https://forms.gle/PZwSjoJb6HNDQgzKA" target="_blank" rel="noopener" data-i18n="formTecno">Formulario TECNOPOZOS</a>
+          <a class="btn gold" href="https://forms.gle/McemSBRopaMKg11Z9" target="_blank" rel="noopener" data-i18n="formKogua">Formulario CALDERAS KOGUA</a>
+          <a class="btn outline" href="https://wa.me/50241516624?text=Hola%20Cesar%2C%20ingrese%20a%20la%20pagina%20web%20y%20deseo%20solicitar%20una%20cotizacion%20personalizada.%20Me%20interesa%20conocer%20sus%20servicios%20de%20TECNOPOZOS%20TPS%20GUATEMALA%20o%20CALDERAS%20KOGUA.%20El%20servicio%20que%20necesito%20es%3A%20%5Bescriba%20el%20servicio%5D.%20%C2%BFPodria%20ayudarme%20con%20informacion%20y%20una%20cotizacion%3F%20Gracias." target="_blank" rel="noopener">WhatsApp Cesar Soto</a>
+          <a class="btn outline" href="https://wa.me/50236457727?text=Hola%20Luis%2C%20ingrese%20a%20la%20pagina%20web%20y%20deseo%20solicitar%20una%20cotizacion%20personalizada.%20Me%20interesa%20conocer%20sus%20servicios%20de%20TECNOPOZOS%20TPS%20GUATEMALA%20o%20CALDERAS%20KOGUA.%20El%20servicio%20que%20necesito%20es%3A%20%5Bescriba%20el%20servicio%5D.%20%C2%BFPodria%20ayudarme%20con%20informacion%20y%20una%20cotizacion%3F%20Gracias." target="_blank" rel="noopener">WhatsApp Luis Valdez</a>
+          <a class="btn outline" href="https://wa.me/50249085629?text=Hola%20Luis%2C%20ingrese%20a%20la%20pagina%20web%20y%20deseo%20solicitar%20una%20cotizacion%20personalizada.%20Me%20interesa%20conocer%20sus%20servicios%20de%20TECNOPOZOS%20TPS%20GUATEMALA%20o%20CALDERAS%20KOGUA.%20El%20servicio%20que%20necesito%20es%3A%20%5Bescriba%20el%20servicio%5D.%20%C2%BFPodria%20ayudarme%20con%20informacion%20y%20una%20cotizacion%3F%20Gracias." target="_blank" rel="noopener">WhatsApp Esau Leiva</a>
+        </div>
+      </div>
+      <div class="feature-grid-new">
+        <div class="feature-new"><strong data-i18n="feature1Title">Atención personalizada</strong><p data-i18n="feature1Text">Revisamos tus necesidades para orientarte hacia el servicio adecuado.</p></div>
+        <div class="feature-new"><strong data-i18n="feature2Title">Enfoque técnico</strong><p data-i18n="feature2Text">Información clara para comprender las alternativas de tu proyecto.</p></div>
+        <div class="feature-new"><strong data-i18n="feature3Title">Contacto directo</strong><p data-i18n="feature3Text">Puedes iniciar una solicitud de asesoría por WhatsApp.</p></div>
+      </div>
+      <div class="social-links-new" aria-label="Redes sociales y ubicación">
+        <a class="btn outline" href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn outline" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn outline" href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+        <a class="btn outline" href="https://www.waze.com/" target="_blank" rel="noopener">Waze</a>
+      </div>
+    </div>
+  </section>
+</section>
+<section id="tecnoView" class="hidden">
+  <div class="wrap">
+    <button class="btn outline back" onclick="showHome()" data-i18n="backCompanies">← Volver a las empresas</button>
+    <div class="company-hero">
+      <div>
+        <span class="eyebrow" data-i18n="wellsTitle">Perforación y desarrollo de pozos</span>
+        <h1>TECNOPOZOS TPS GUATEMALA</h1>
+        <p data-i18n="tecnoIntro">Brindamos soluciones para el abastecimiento de agua mediante servicios de perforación y desarrollo de pozos, adaptados a los requerimientos de cada proyecto.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://forms.gle/PZwSjoJb6HNDQgzKA" target="_blank" rel="noopener" data-i18n="quoteWell">Solicitar cotización</a>
+          <a class="btn outline" href="https://wa.me/50241516624?text=Hola%2C%20estoy%20interesado%20en%20informacion%20y%20una%20cotizacion%20para%20perforacion%20y%20desarrollo%20de%20un%20pozo%20de%20agua.%20%C2%BFPodrian%20asesorarme%3F" target="_blank" rel="noopener" data-i18n="openWhatsApp">WhatsApp Cesar</a>
+          <a class="btn outline" href="https://wa.me/50236457727?text=Hola%2C%20estoy%20interesado%20en%20informacion%20y%20una%20cotizacion%20para%20perforacion%20y%20desarrollo%20de%20un%20pozo%20de%20agua.%20%C2%BFPodrian%20asesorarme%3F" target="_blank" rel="noopener" data-i18n="openWhatsApp">WhatsApp Luis</a>
+        </div>
+      </div>
+      <div class="media-frame">
+        <video controls playsinline preload="metadata" poster="imagen_intro.jpg">
+          <source src="intro.mp4" type="video/mp4">
+          Tu navegador no puede reproducir este video.
+        </video>
+        <div class="media-note" data-i18n="tecnoVideoNote">Video de introducción de TECNOPOZOS TPS GUATEMALA</div>
+      </div>
+    </div>
+    <div class="media-frame">
+      <img src="imagen_intro.jpg" alt="Imagen de introduccion de TECNOPOZOS TPS GUATEMALA" onerror="this.alt='Coloca aqui tu archivo imagen_intro.jpg'">
+      <div class="media-note" data-i18n="tecnoPhotoNote">Imagen de presentación de TECNOPOZOS TPS GUATEMALA.</div>
+    </div>
+    <div class="feature-grid">
+      <article class="feature">
+        <div class="symbol" aria-label="Perforadora de pozos" role="img">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 54h44M18 54V18h7v36M14 18h16M21 18l17 25M38 43l-4 11M38 43l8-4M25 26h16M41 26v14M37 40h8M14 18l7-10 7 10M21 8v-4M12 54l4-8h9l4 8"/><path d="M34 48c0-4 4-5 4-9 4 4 6 7 3 10-2 2-6 1-7-1Z"/></svg>
+        </div>
+        <h3 data-i18n="wellsTitle">Perforación de pozos</h3>
+        <p data-i18n="wellFeature1">Servicios orientados a proyectos de captación y abastecimiento de agua.</p>
+      </article>
+      <article class="feature">
+        <div class="symbol" aria-label="Desarrollo de pozos" role="img">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 20h48M13 20v8h38v-8M18 28v7h28v-7M22 35v8h20v-8M26 43v8h12v-8M32 8v7M25 15h14M32 15v8M12 51h40M16 56h32"/><path d="M26 12c0-4 3-7 6-7s6 3 6 7M29 51v5M35 51v5"/><path d="M27 29c0 3 2 5 5 5s5-2 5-5"/></svg>
+        </div>
+        <h3 data-i18n="developWellsTitle">Desarrollo de pozos</h3>
+        <p data-i18n="wellFeature2">Trabajos para apoyar el funcionamiento del pozo según las características del proyecto.</p>
+      </article>
+      <article class="feature">
+        <div class="symbol" aria-label="Atencion a proyectos" role="img">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="15" y="10" width="34" height="44" rx="4"/><path d="M24 10V6h16v4M23 23h18M23 31h12M23 39h8"/><path d="m36 43 4 4 9-10"/></svg>
+        </div>
+        <h3 data-i18n="projectSupportTitle">Atención a proyectos</h3>
+        <p data-i18n="projectFeature">Comuníquese con nosotros para conversar sobre sus necesidades y solicitar una cotización.</p>
+      </article>
+    </div>
+    <section class="gallery-section" id="galeriaTecno">
+      <span class="eyebrow" data-i18n="visualWork">Nuestros proyectos</span>
+      <h2 data-i18n="galleryTitle">Galería de TECNOPOZOS</h2>
+      <p class="gallery-description" data-i18n="galleryText">Fotografías y videos de perforación, desarrollo y trabajos en pozos de agua.</p>
+      <div class="gallery-grid">
+        <article class="gallery-item">
+          <img src="galeria/tecno/foto1.jpg" alt="Proyecto de perforacion de pozo" loading="lazy">
+          <div class="gallery-caption" data-i18n="wellsTitle">Perforación de pozos</div>
+        </article>
+        <article class="gallery-item">
+          <img src="galeria/tecno/foto2.jpg" alt="Trabajo de desarrollo de pozo" loading="lazy">
+          <div class="gallery-caption" data-i18n="developWellsTitle">Desarrollo de pozos</div>
+        </article>
+        <article class="gallery-item">
+          <img src="galeria/tecno/foto3.jpg" alt="Trabajo de desarrollo de pozo" loading="lazy">
+          <div class="gallery-caption" data-i18n="developWellsTitle">Desarrollo de pozos</div>
+        </article>
+        <article class="gallery-item">
+          <img src="galeria/tecno/foto4.jpg" alt="Trabajo de desarrollo de pozo" loading="lazy">
+          <div class="gallery-caption" data-i18n="developWellsTitle">Desarrollo de pozos</div>
+        </article>
+        <article class="gallery-item">
+          <video controls playsinline preload="metadata">
+            <source src="galeria/tecno/video1.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="gallery-caption" data-i18n="visualWork">Video de nuestros trabajos</div>
+        </article>
+        <article class="gallery-item">
+          <video controls playsinline preload="metadata">
+            <source src="galeria/tecno/video2.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="gallery-caption" data-i18n="projectSupportTitle">Proyecto en campo</div>
+        </article>
+        <article class="gallery-item">
+          <video controls playsinline preload="metadata">
+            <source src="galeria/tecno/video3.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="gallery-caption" data-i18n="projectSupportTitle">Proyecto en campo</div>
+        </article>
+        <article class="gallery-item">
+          <video controls playsinline preload="metadata">
+            <source src="galeria/tecno/video4.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="gallery-caption" data-i18n="projectSupportTitle">Proyecto en campo</div>
+        </article>
+        <article class="gallery-item">
+          <video controls playsinline preload="metadata">
+            <source src="galeria/tecno/video5.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="gallery-caption" data-i18n="projectSupportTitle">Proyecto en campo</div>
+        </article>
+      </div>
+    </section>
+    <div class="contact-panel">
+      <div>
+        <h3 data-i18n="wellNeedTitle">¿Necesita un pozo de agua?</h3>
+        <p data-i18n="wellNeedText">Contactenos para compartir los detalles de su proyecto.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://forms.gle/PZwSjoJb6HNDQgzKA" target="_blank" rel="noopener" data-i18n="quoteForm">Formulario de cotización</a>
+        <a class="btn outline" href="https://wa.me/50241516624?text=Hola%2C%20estoy%20interesado%20en%20informacion%20y%20una%20cotizacion%20para%20perforacion%20y%20desarrollo%20de%20un%20pozo%20de%20agua.%20%C2%BFPodrian%20asesorarme%3F" target="_blank" rel="noopener">Cesar Soto</a>
+        <a class="btn outline" href="https://wa.me/50236457727?text=Hola%2C%20estoy%20interesado%20en%20informacion%20y%20una%20cotizacion%20para%20perforacion%20y%20desarrollo%20de%20un%20pozo%20de%20agua.%20%C2%BFPodrian%20asesorarme%3F" target="_blank" rel="noopener">Luis Valdez</a>
+        <a class="btn outline" href="https://wa.me/50249085629" target="_blank" rel="noopener">Esau Leiva</a>
+      </div>
+    </div>
+    <section class="section">
+      <h2 data-i18n="socialTitle">Redes sociales</h2>
+      <div class="socials">
+        <a href="https://www.instagram.com/tecnopozostps_guatemala/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@tecnopozos_tps" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://waze.com/ul" target="_blank" rel="noopener">Waze</a>
+      </div>
+    </section>
+  </div>
+</section>
+<section id="koguaView" class="hidden">
+  <div class="wrap">
+    <button class="btn outline back" onclick="showHome()" data-i18n="backCompanies">← Volver a las empresas</button>
+    <div class="company-hero">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)" data-i18n="industryTag">biomasa</span>
+        <h1>CALDERAS KOGUA</h1>
+        <p data-i18n="koguaIntro">Fabricación e instalación de calderas de biomasa para aplicaciones industriales. Trabajamos para conocer las necesidades de cada proceso y orientar una solución adecuada.</p>
+        <div class="actions">
+          <a class="btn gold" href="https://forms.gle/McemSBRopaMKg11Z9" target="_blank" rel="noopener" data-i18n="quoteBoiler">Solicitar cotización</a>
+          <a class="btn outline" href="https://wa.me/50241516624?text=Hola%2C%20estoy%20interesado%20en%20informacion%20y%20una%20cotizacion%20para%20fabricacion%20e%20instalacion%20de%20una%20caldera%20de%20biomasa.%20%C2%BFPodrian%20asesorarme%3F" target="_blank" rel="noopener" data-i18n="openWhatsApp">Consultar por WhatsApp</a>
+        </div>
+      </div>
+      <div class="media-frame">
+        <video controls playsinline preload="metadata" poster="calderas_kogua.jpg">
+          <source src="calderas_kogua.mp4" type="video/mp4">
+          Tu navegador no puede reproducir este video.
+        </video>
+        <div class="media-note" data-i18n="koguaVideoNote">Video de introducción de CALDERAS KOGUA</div>
+      </div>
+    </div>
+    <div class="media-frame">
+      <img src="calderas_kogua.jpg" alt="Fotografia de presentacion de Calderas Kogua" onerror="this.alt='Coloca aqui tu archivo calderas_kogua.jpg'">
+      <div class="media-note" data-i18n="koguaPhotoNote">Fotografía de presentación de Calderas KOGUA.</div>
+    </div>
+    <div class="feature-grid">
+      <article class="feature">
+        <div class="symbol" aria-label="Caldera de biomasa" role="img">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M15 29h34v25H15zM21 29V17h22v12M27 17V9h10v8M11 54h42M21 36h22v12H21zM26 41h12"/><path d="M32 37c-1-4 4-6 3-10 7 6 8 12 3 15-5 3-11-1-9-6 1-2 2-3 3-4Z"/></svg>
+        </div>
+        <h3 data-i18n="boilersTitle">Calderas de biomasa</h3>
+        <p data-i18n="boilerFeature1">Soluciones térmicas que utilizan biomasa como combustible, según el diseño y las necesidades del proceso.</p>
+      </article>
+      <article class="feature">
+        <div class="symbol" aria-label="Fabricacion industrial" role="img">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 54V30l14 8V27l14 10V23l20 10v21H8ZM15 54V44h8v10M31 54V44h8v10M45 54V44h5v10M17 22V10h8v17M17 10h8"/><path d="M31 17h10M36 12v10M44 20h8"/></svg>
+        </div>
+        <h3 data-i18n="manufacturingTitle">Fabricación</h3>
+        <p data-i18n="boilerFeature2">Equipos concebidos para el ahorro de hasta un 80% en combustibles fósiles.</p>
+      </article>
+      <article class="feature">
+        <div class="symbol" aria-label="Instalacion y mantenimiento" role="img">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 12a15 15 0 0 0-18 19L9 42a5 5 0 0 0 7 7l11-11a15 15 0 0 0 19-18l-9 9-8-2-2-8Z"/><path d="m12 45 4 4M38 12l-3 9 8 2 9-9"/><path d="M38 44h15v10H38zM42 44v-5h7v5"/></svg>
+        </div>
+        <h3 data-i18n="installationTitle">Instalación</h3>
+        <p data-i18n="boilerFeature3">Consulte con nuestro equipo los requerimientos técnicos de instalación y puesta en marcha.</p>
+      </article>
+    </div>
+    <section class="gallery-section" id="galeriaKogua">
+      <span class="eyebrow" style="color:var(--gold)" data-i18n="visualWork">Proyectos industriales</span>
+      <h2 data-i18n="galleryTitle">Galería de CALDERAS KOGUA</h2>
+      <p class="gallery-description" data-i18n="boilersText">Fotografías y videos de fabricación, instalación y proyectos de calderas de biomasa.</p>
+      <div class="gallery-grid">
+        <article class="gallery-item">
+          <img src="galeria/kogua/foto1.jpg" alt="Caldera de biomasa" loading="lazy">
+          <div class="gallery-caption" data-i18n="boilersTitle">Calderas de biomasa</div>
+        </article>
+        <article class="gallery-item">
+          <img src="galeria/kogua/foto2.jpg" alt="Fabricacion de caldera industrial" loading="lazy">
+          <div class="gallery-caption" data-i18n="manufacturingTitle">Fabricación de equipos</div>
+        </article>
+        <article class="gallery-item">
+          <video controls playsinline preload="metadata">
+            <source src="galeria/kogua/video1.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="gallery-caption" data-i18n="manufacturingTitle">Proceso de fabricación</div>
+        </article>
+       <article class="gallery-item">
+          <video controls playsinline preload="metadata">
+            <source src="galeria/kogua/video3.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="gallery-caption" data-i18n="manufacturingTitle">Proceso de fabricación</div>
+        </article>
+       <article class="gallery-item">
+          <video controls playsinline preload="metadata">
+            <source src="galeria/kogua/video2.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+          <div class="gallery-caption" data-i18n="installationTitle">Instalación de calderas</div>
+        </article>
+      </div>
+    </section>
+    <div class="contact-panel">
+      <div>
+        <h3 data-i18n="boilerNeedTitle">¿Busca una solucion de biomasa?</h3>
+        <p data-i18n="boilerNeedText">Comparta con nosotros las necesidades de su proceso industrial.</p>
+      </div>
+      <div class="actions">
+        <a class="btn gold" href="https://forms.gle/McemSBRopaMKg11Z9" target="_blank" rel="noopener" data-i18n="quoteForm">Formulario de cotización</a>
+        <a class="btn outline" href="https://wa.me/50241516624?text=Hola%2C%20estoy%20interesado%20en%20informacion%20y%20una%20cotizacion%20para%20fabricacion%20e%20instalacion%20de%20una%20caldera%20de%20biomasa.%20%C2%BFPodrian%20asesorarme%3F" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> TECNOPOZOS TPS GUATEMALA · CALDERAS KOGUA</span>
+    <span data-i18n="footerText">Soluciones tecnicas para sus proyectos</span>
+  </div>
+</footer>
+<button class="chat-launch" id="chatLaunch" aria-label="Abrir asistente" onclick="toggleChat()">
+  <span class="chat-avatar" aria-hidden="true">
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 24v-3C9 12 15.7 5 24 5s15 7 15 16v3" stroke="#073451" stroke-width="4" stroke-linecap="round"/>
+      <rect x="5" y="20" width="9" height="15" rx="4" fill="#073451"/>
+      <rect x="34" y="20" width="9" height="15" rx="4" fill="#073451"/>
+      <circle cx="24" cy="19" r="9" fill="#FFD7B0"/>
+      <path d="M14 39c1-7 5-10 10-10s9 3 10 10" fill="#073451"/>
+      <path d="M30 34h6a4 4 0 0 1-4 4h-2" stroke="#073451" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+  </span>
+</button>
+<div class="chat-box hidden" id="chatBox" role="dialog" aria-label="Asistente virtual">
+  <div class="chat-head">
+    <div class="chat-head-main">
+      <span class="chat-avatar" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 24v-3C9 12 15.7 5 24 5s15 7 15 16v3" stroke="#073451" stroke-width="4" stroke-linecap="round"/>
+          <rect x="5" y="20" width="9" height="15" rx="4" fill="#073451"/>
+          <rect x="34" y="20" width="9" height="15" rx="4" fill="#073451"/>
+          <circle cx="24" cy="19" r="9" fill="#FFD7B0"/>
+          <path d="M14 39c1-7 5-10 10-10s9 3 10 10" fill="#073451"/>
+          <path d="M30 34h6a4 4 0 0 1-4 4h-2" stroke="#073451" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <div data-i18n="chatTitle">Asistente virtual<small>TECNOPOZOS · CALDERAS KOGUA</small></div>
+    </div>
+    <button class="chat-close" onclick="toggleChat()" aria-label="Cerrar">×</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="bubble">¡Hola! Puedo orientarte sobre nuestros servicios. ¿Te interesa un pozo de agua o una caldera de biomasa?</div>
+  </div>
+  <div class="quick">
+    <button onclick="quickAsk('Quiero informacion sobre pozos de agua')">Pozos de agua</button>
+    <button onclick="quickAsk('Quiero informacion sobre calderas de biomasa')">Calderas de biomasa</button>
+    <button onclick="quickAsk('Quiero una cotizacion')">Cotizacion</button>
+    <button onclick="quickAsk('Quiero hablar con una persona')">Asesor</button>
+  </div>
+  <form class="chat-form" id="chatForm">
+    <input id="chatInput" data-i18n-placeholder="chatPlaceholder" placeholder="Escribe tu consulta..." autocomplete="off" aria-label="Tu consulta">
+    <button type="submit" data-i18n-aria="send" aria-label="Enviar">➤</button>
+  </form>
+</div>
+<script>
+const AI_ENDPOINT = "";
+const LANGS = {
+es:{language:"Idioma",topline:"Soluciones técnicas para agua e industria en Guatemala",navHome:"Inicio",navServices:"Servicios",navCompany:"Empresas",navGallery:"Galería",navContact:"Contacto",heroEyebrow:"Experiencia · Tecnología · Confianza",heroTitle:"Soluciones en pozos de agua y calderas de biomasa",heroText:"Acompañamos tus proyectos con servicios técnicos, soluciones industriales y atención personalizada en Guatemala.",seeServices:"Conocer servicios",requestAdvisor:"Solicitar asesor",heroMedia:"Tecnología y experiencia para tus proyectos.",whatWeDo:"Qué hacemos",servicesTitle:"Soluciones para tus necesidades",servicesText:"Selecciona un servicio para conocer más o solicitar una cotización.",waterTag:"Agua",wellsTitle:"Perforación y desarrollo de pozos de agua",wellsText:"Soluciones para proyectos de abastecimiento de agua, con orientación técnica según las características y necesidades de cada proyecto.",quoteWell:"Cotizar pozo de agua",askMore:"Consultar al chatbot",industryTag:"Industria",boilersTitle:"Calderas de biomasa KOGUA",boilersText:"Alternativas de generación térmica mediante biomasa para procesos industriales y necesidades de energía térmica.",quoteBoiler:"Cotizar caldera",ourCompanies:"Nuestras empresas",companyTitle:"Conocimiento técnico para distintos proyectos",companyText:"Conoce nuestras líneas de servicio y contáctanos para evaluar los requerimientos de tu proyecto.",companyWellText:"Perforación y desarrollo de pozos de agua, con orientación para proyectos de abastecimiento.",wellForm:"Formulario de pozos",companyBoilerText:"Soluciones de calderas de biomasa para necesidades térmicas industriales.",boilerForm:"Formulario de calderas",feature1Title:"Atención personalizada",feature1Text:"Revisamos tus necesidades para orientarte hacia el servicio adecuado.",feature2Title:"Enfoque técnico",feature2Text:"Información clara para comprender las alternativas de tu proyecto.",feature3Title:"Contacto directo",feature3Text:"Puedes iniciar una solicitud de asesoría por WhatsApp.",visualWork:"Nuestro trabajo",galleryTitle:"Galería de proyectos",galleryText:"Los archivos locales que ya existan en tu carpeta se mostrarán aquí.",contactUs:"Contáctanos",contactTitle:"Hablemos de tu proyecto",contactText:"Elige un formulario o conversa con el chatbot para iniciar una solicitud.",wellContact:"Pozos de agua · TECNOPOZOS",wellContactText:"Para consultas sobre perforación y desarrollo de pozos.",openWellForm:"Abrir formulario de pozos",boilerContact:"Calderas de biomasa · KOGUA",boilerContactText:"Para consultas sobre calderas y aplicaciones industriales.",openBoilerForm:"Abrir formulario de calderas",socialTitle:"Redes y ubicación",socialNote:"Si tus enlaces oficiales son distintos, reemplaza las direcciones de ejemplo por las tuyas.",footerText:"Soluciones técnicas para tus proyectos.",chatButton:"Chat de asesoría",send:"Enviar",chatDisclaimer:"Asistente informativo. Para confirmar detalles técnicos, solicita asesoría.",chatWelcome:"¡Hola! Soy el asistente virtual de TECNOPOZOS y KOGUA. ¿Qué servicio te interesa?",chatWell:"Pozos de agua",chatBoiler:"Calderas de biomasa",chatQuote:"Cotización",chatAdvisor:"Hablar con un asesor",askService:"¿Quieres información sobre pozos de agua o calderas de biomasa?",askWhat:"¿Quieres saber qué hacemos como empresa? Puedo explicarte nuestros servicios o ayudarte a solicitar una cotización.",wellInfo:"TECNOPOZOS ofrece orientación para proyectos de perforación y desarrollo de pozos de agua. Los requisitos dependen del lugar y de las características del proyecto.",boilerInfo:"KOGUA ofrece soluciones de calderas de biomasa para aplicaciones térmicas industriales. Un asesor puede revisar el proceso y las necesidades de tu instalación.",chooseFlow:"¿Qué deseas hacer?",askCountry:"¿En qué país y ciudad se realizará el proyecto?",askName:"¿Cuál es tu nombre?",askSource:"¿Por qué medio nos contactaste? Escribe A para Facebook, B para Google, o describe otro medio.",askAdvisor:"¿Qué asesor prefieres?",askContactConfirm:"Gracias. Revisemos los datos y abramos WhatsApp para enviar tu solicitud.",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"Otro medio",cancel:"Cancelar solicitud",restart:"Empezar de nuevo",unknown:"Puedo ayudarte con información general sobre pozos de agua y calderas de biomasa. También puedes elegir una opción de abajo.",askServiceType:"¿Tu consulta es sobre un pozo de agua o una caldera de biomasa?",advisorMissing:"Primero completa los datos que faltan.",whatsappIntro:"Hola, solicito asesoría para mi proyecto.",serviceWellTitle:"SOLICITUD DE ASESORÍA: POZO DE AGUA",serviceBoilerTitle:"SOLICITUD DE ASESORÍA: CALDERA DE BIOMASA",clientCountry:"País/ciudad",clientName:"Nombre",clientSource:"Medio de contacto",clientService:"Servicio",clientAdvisor:"Asesor solicitado",openWhatsApp:"Continuar en WhatsApp",languagePrompt:"¿En qué idioma deseas continuar?",introLanguage:"Elige el idioma para navegar por la página y conversar con nuestro asistente.",languageNote:"Puedes cambiar el idioma más adelante con el botón “Idioma”.",mediaTitle:"Tecnología y experiencia para tus proyectos."},
+en:{language:"Language",topline:"Technical solutions for water and industry in Guatemala",navHome:"Home",navServices:"Services",navCompany:"Companies",navGallery:"Gallery",navContact:"Contact",heroEyebrow:"Experience · Technology · Trust",heroTitle:"Water wells and biomass boiler solutions",heroText:"We support your projects with technical services, industrial solutions and personalized assistance in Guatemala.",seeServices:"Explore services",requestAdvisor:"Request an advisor",heroMedia:"Technology and experience for your projects.",whatWeDo:"What we do",servicesTitle:"Solutions for your needs",servicesText:"Choose a service to learn more or request a quote.",waterTag:"Water",wellsTitle:"Water well drilling and development",wellsText:"Solutions for water supply projects, with technical guidance based on each project's needs and conditions.",quoteWell:"Get a well quote",askMore:"Ask the chatbot",industryTag:"Industry",boilersTitle:"KOGUA biomass boilers",boilersText:"Biomass thermal-generation options for industrial processes and heat requirements.",quoteBoiler:"Get a boiler quote",ourCompanies:"Our companies",companyTitle:"Technical expertise for different projects",companyText:"Explore our services and contact us to review your project requirements.",companyWellText:"Water well drilling and development guidance for water supply projects.",wellForm:"Water well form",companyBoilerText:"Biomass boiler solutions for industrial heat needs.",boilerForm:"Boiler form",feature1Title:"Personalized assistance",feature1Text:"We review your needs and guide you toward the right service.",feature2Title:"Technical approach",feature2Text:"Clear information to help you understand your project options.",feature3Title:"Direct contact",feature3Text:"Start an advisory request through WhatsApp.",visualWork:"Our work",galleryTitle:"Project gallery",galleryText:"Local files already in your site folder will appear here.",contactUs:"Contact us",contactTitle:"Let's discuss your project",contactText:"Choose a form or chat with the assistant to start a request.",wellContact:"Water wells · TECNOPOZOS",wellContactText:"For water well drilling and development inquiries.",openWellForm:"Open water well form",boilerContact:"Biomass boilers · KOGUA",boilerContactText:"For boiler and industrial application inquiries.",openBoilerForm:"Open boiler form",socialTitle:"Social media and location",socialNote:"If your official links differ, replace the example URLs with your own.",footerText:"Technical solutions for your projects.",chatButton:"Advisory chat",send:"Send",chatDisclaimer:"Informational assistant. Request an advisor to confirm technical details.",chatWelcome:"Hello! I'm the TECNOPOZOS and KOGUA virtual assistant. Which service are you interested in?",chatWell:"Water wells",chatBoiler:"Biomass boilers",chatQuote:"Request a quote",chatAdvisor:"Talk to an advisor",askService:"Would you like information about water wells or biomass boilers?",askWhat:"Would you like to know what our company does? I can explain our services or help you request a quote.",wellInfo:"TECNOPOZOS provides guidance for water well drilling and development projects. Requirements depend on the location and project conditions.",boilerInfo:"KOGUA provides biomass boiler solutions for industrial heat applications. An advisor can review your process and facility needs.",chooseFlow:"What would you like to do?",askCountry:"In which country and city will the project take place?",askName:"What is your name?",askSource:"How did you hear about us? Type A for Facebook, B for Google, or describe another source.",askAdvisor:"Which advisor would you prefer?",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"Other source",cancel:"Cancel request",restart:"Start over",unknown:"I can provide general information about water wells and biomass boilers. You can also choose an option below.",askServiceType:"Is your inquiry about a water well or a biomass boiler?",advisorMissing:"Please complete the missing details first.",whatsappIntro:"Hello, I am requesting advice for my project.",serviceWellTitle:"ADVISORY REQUEST: WATER WELL",serviceBoilerTitle:"ADVISORY REQUEST: BIOMASS BOILER",clientCountry:"Country/city",clientName:"Name",clientSource:"Contact source",clientService:"Service",clientAdvisor:"Requested advisor",openWhatsApp:"Continue in WhatsApp",languagePrompt:"Which language would you like to use?",introLanguage:"Choose the language for the website and chat assistant.",languageNote:"You can change the language later using the Language button.",mediaTitle:"Technology and experience for your projects."},
+pt:{language:"Idioma",topline:"Soluções técnicas para água e indústria na Guatemala",navHome:"Início",navServices:"Serviços",navCompany:"Empresas",navGallery:"Galeria",navContact:"Contato",heroEyebrow:"Experiência · Tecnologia · Confiança",heroTitle:"Soluções em poços de água e caldeiras de biomassa",heroText:"Apoiamos seus projetos com serviços técnicos, soluções industriais e atendimento personalizado na Guatemala.",seeServices:"Ver serviços",requestAdvisor:"Solicitar consultor",heroMedia:"Tecnologia e experiência para seus projetos.",whatWeDo:"O que fazemos",servicesTitle:"Soluções para suas necessidades",servicesText:"Escolha um serviço para saber mais ou solicitar um orçamento.",waterTag:"Água",wellsTitle:"Perfuração e desenvolvimento de poços de água",wellsText:"Soluções para projetos de abastecimento de água, com orientação técnica conforme as necessidades de cada projeto.",quoteWell:"Orçamento de poço",askMore:"Consultar chatbot",industryTag:"Indústria",boilersTitle:"Caldeiras de biomassa KOGUA",boilersText:"Alternativas de geração térmica com biomassa para processos industriais.",quoteBoiler:"Orçamento de caldeira",ourCompanies:"Nossas empresas",companyTitle:"Conhecimento técnico para diferentes projetos",companyText:"Conheça nossos serviços e entre em contato para avaliar seu projeto.",companyWellText:"Orientação para perfuração e desenvolvimento de poços de água.",wellForm:"Formulário de poços",companyBoilerText:"Soluções de caldeiras de biomassa para necessidades térmicas industriais.",boilerForm:"Formulário de caldeiras",feature1Title:"Atendimento personalizado",feature1Text:"Analisamos suas necessidades para orientar você.",feature2Title:"Foco técnico",feature2Text:"Informações claras sobre as opções do projeto.",feature3Title:"Contato direto",feature3Text:"Inicie uma solicitação pelo WhatsApp.",visualWork:"Nosso trabalho",galleryTitle:"Galeria de projetos",galleryText:"Os arquivos locais existentes na pasta do site aparecerão aqui.",contactUs:"Fale conosco",contactTitle:"Vamos conversar sobre seu projeto",contactText:"Escolha um formulário ou converse com o assistente.",wellContact:"Poços de água · TECNOPOZOS",wellContactText:"Para consultas sobre perfuração e desenvolvimento de poços.",openWellForm:"Abrir formulário de poços",boilerContact:"Caldeiras de biomassa · KOGUA",boilerContactText:"Para consultas sobre caldeiras e aplicações industriais.",openBoilerForm:"Abrir formulário de caldeiras",socialTitle:"Redes e localização",socialNote:"Substitua os links de exemplo pelos seus links oficiais, se necessário.",footerText:"Soluções técnicas para seus projetos.",chatButton:"Chat de consultoria",send:"Enviar",chatDisclaimer:"Assistente informativo. Solicite um consultor para confirmar detalhes técnicos.",chatWelcome:"Olá! Sou o assistente virtual da TECNOPOZOS e KOGUA. Qual serviço interessa a você?",chatWell:"Poços de água",chatBoiler:"Caldeiras de biomassa",chatQuote:"Solicitar orçamento",chatAdvisor:"Falar com consultor",askService:"Deseja informações sobre poços de água ou caldeiras de biomassa?",askWhat:"Quer saber o que fazemos como empresa? Posso explicar nossos serviços ou ajudar com um orçamento.",wellInfo:"A TECNOPOZOS orienta projetos de perfuração e desenvolvimento de poços de água. Os requisitos dependem do local e do projeto.",boilerInfo:"A KOGUA oferece soluções de caldeiras de biomassa para aplicações térmicas industriais.",chooseFlow:"O que deseja fazer?",askCountry:"Em qual país e cidade será realizado o projeto?",askName:"Qual é o seu nome?",askSource:"Como nos conheceu? Digite A para Facebook, B para Google ou descreva outra origem.",askAdvisor:"Qual consultor prefere?",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"Outra origem",cancel:"Cancelar solicitação",restart:"Recomeçar",unknown:"Posso ajudar com informações gerais sobre poços de água e caldeiras de biomassa.",askServiceType:"Sua consulta é sobre um poço de água ou uma caldeira de biomassa?",advisorMissing:"Complete os dados que faltam primeiro.",whatsappIntro:"Olá, solicito orientação para meu projeto.",serviceWellTitle:"SOLICITAÇÃO DE CONSULTORIA: POÇO DE ÁGUA",serviceBoilerTitle:"SOLICITAÇÃO DE CONSULTORIA: CALDEIRA DE BIOMASSA",clientCountry:"País/cidade",clientName:"Nome",clientSource:"Origem do contato",clientService:"Serviço",clientAdvisor:"Consultor solicitado",openWhatsApp:"Continuar no WhatsApp",languagePrompt:"Em qual idioma deseja continuar?",introLanguage:"Escolha o idioma do site e do assistente.",languageNote:"Você pode mudar o idioma depois no botão Idioma.",mediaTitle:"Tecnologia e experiência para seus projetos."},
+ko:{language:"언어",topline:"과테말라의 물 및 산업 기술 솔루션",navHome:"홈",navServices:"서비스",navCompany:"회사",navGallery:"갤러리",navContact:"문의",heroEyebrow:"경험 · 기술 · 신뢰",heroTitle:"지하수 우물 및 바이오매스 보일러 솔루션",heroText:"과테말라에서 기술 서비스와 산업 솔루션, 맞춤형 상담으로 프로젝트를 지원합니다.",seeServices:"서비스 보기",requestAdvisor:"상담 요청",heroMedia:"프로젝트를 위한 기술과 경험",whatWeDo:"주요 서비스",servicesTitle:"필요에 맞는 솔루션",servicesText:"서비스를 선택하여 자세히 알아보거나 견적을 요청하세요.",waterTag:"물",wellsTitle:"지하수 우물 시추 및 개발",wellsText:"프로젝트 조건과 필요에 맞춘 기술 안내를 제공합니다.",quoteWell:"우물 견적 요청",askMore:"챗봇 문의",industryTag:"산업",boilersTitle:"KOGUA 바이오매스 보일러",boilersText:"산업 공정과 열에너지 수요를 위한 바이오매스 열 공급 솔루션입니다.",quoteBoiler:"보일러 견적 요청",ourCompanies:"회사 소개",companyTitle:"다양한 프로젝트를 위한 기술 전문성",companyText:"서비스를 살펴보고 프로젝트 요구사항을 문의하세요.",companyWellText:"용수 공급 프로젝트를 위한 우물 시추 및 개발 안내.",wellForm:"우물 문의 양식",companyBoilerText:"산업용 열 수요를 위한 바이오매스 보일러 솔루션.",boilerForm:"보일러 문의 양식",feature1Title:"맞춤형 상담",feature1Text:"필요 사항을 검토하고 적합한 서비스를 안내합니다.",feature2Title:"기술 중심",feature2Text:"프로젝트 옵션을 이해하기 쉬운 정보로 안내합니다.",feature3Title:"직접 연락",feature3Text:"WhatsApp으로 상담 요청을 시작할 수 있습니다.",visualWork:"작업 사례",galleryTitle:"프로젝트 갤러리",galleryText:"사이트 폴더에 있는 이미지와 영상이 표시됩니다.",contactUs:"문의하기",contactTitle:"프로젝트에 대해 상담하세요",contactText:"양식을 선택하거나 챗봇으로 문의를 시작하세요.",wellContact:"지하수 우물 · TECNOPOZOS",wellContactText:"우물 시추 및 개발 문의",openWellForm:"우물 양식 열기",boilerContact:"바이오매스 보일러 · KOGUA",boilerContactText:"보일러 및 산업 적용 문의",openBoilerForm:"보일러 양식 열기",socialTitle:"소셜 미디어 및 위치",socialNote:"공식 링크가 다르면 예시 주소를 실제 링크로 바꾸세요.",footerText:"프로젝트를 위한 기술 솔루션",chatButton:"상담 채팅",send:"전송",chatDisclaimer:"정보 제공용 도우미입니다. 기술 세부 사항은 상담원에게 확인하세요.",chatWelcome:"안녕하세요! TECNOPOZOS와 KOGUA의 가상 도우미입니다. 어떤 서비스가 필요하신가요?",chatWell:"지하수 우물",chatBoiler:"바이오매스 보일러",chatQuote:"견적 요청",chatAdvisor:"상담원과 대화",askService:"우물 또는 바이오매스 보일러에 대한 정보가 필요하신가요?",askWhat:"저희 회사가 하는 일을 알고 싶으신가요? 서비스 안내나 견적 요청을 도와드릴 수 있습니다.",wellInfo:"TECNOPOZOS는 지하수 우물 시추 및 개발 프로젝트에 대한 안내를 제공합니다. 조건은 위치와 프로젝트에 따라 달라집니다.",boilerInfo:"KOGUA는 산업용 열 응용을 위한 바이오매스 보일러 솔루션을 제공합니다.",chooseFlow:"무엇을 원하시나요?",askCountry:"프로젝트가 진행될 국가와 도시는 어디인가요?",askName:"성함을 알려주세요.",askSource:"어떤 경로로 저희를 알게 되셨나요? A는 Facebook, B는 Google, 또는 다른 경로를 적어주세요.",askAdvisor:"어떤 상담원을 원하시나요?",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"기타 경로",cancel:"요청 취소",restart:"다시 시작",unknown:"우물과 바이오매스 보일러에 대한 일반 정보를 안내해 드릴 수 있습니다.",askServiceType:"우물 문의인가요, 바이오매스 보일러 문의인가요?",advisorMissing:"먼저 누락된 정보를 입력해 주세요.",whatsappIntro:"안녕하세요. 프로젝트 상담을 요청합니다.",serviceWellTitle:"상담 요청: 지하수 우물",serviceBoilerTitle:"상담 요청: 바이오매스 보일러",clientCountry:"국가/도시",clientName:"이름",clientSource:"문의 경로",clientService:"서비스",clientAdvisor:"요청 상담원",openWhatsApp:"WhatsApp에서 계속",languagePrompt:"어떤 언어로 진행하시겠습니까?",introLanguage:"웹사이트와 채팅 도우미의 언어를 선택하세요.",languageNote:"나중에 언어 버튼으로 변경할 수 있습니다.",mediaTitle:"프로젝트를 위한 기술과 경험"},
+fr:{language:"Langue",topline:"Solutions techniques pour l’eau et l’industrie au Guatemala",navHome:"Accueil",navServices:"Services",navCompany:"Entreprises",navGallery:"Galerie",navContact:"Contact",heroEyebrow:"Expérience · Technologie · Confiance",heroTitle:"Solutions pour les puits d’eau et les chaudières à biomasse",heroText:"Nous accompagnons vos projets avec des services techniques et des solutions industrielles au Guatemala.",seeServices:"Voir les services",requestAdvisor:"Demander un conseiller",heroMedia:"Technologie et expérience pour vos projets",whatWeDo:"Nos activités",servicesTitle:"Des solutions adaptées à vos besoins",servicesText:"Choisissez un service pour en savoir plus ou demander un devis.",waterTag:"Eau",wellsTitle:"Forage et développement de puits d’eau",wellsText:"Conseils techniques adaptés aux besoins et aux conditions de chaque projet.",quoteWell:"Devis pour un puits",askMore:"Consulter le chatbot",industryTag:"Industrie",boilersTitle:"Chaudières à biomasse KOGUA",boilersText:"Solutions thermiques à biomasse pour les processus industriels.",quoteBoiler:"Devis pour une chaudière",ourCompanies:"Nos entreprises",companyTitle:"Expertise technique pour vos projets",companyText:"Découvrez nos services et contactez-nous pour étudier votre projet.",companyWellText:"Conseils pour le forage et le développement de puits d’eau.",wellForm:"Formulaire pour puits",companyBoilerText:"Chaudières à biomasse pour les besoins thermiques industriels.",boilerForm:"Formulaire chaudières",feature1Title:"Service personnalisé",feature1Text:"Nous étudions vos besoins pour vous orienter.",feature2Title:"Approche technique",feature2Text:"Des informations claires sur les options possibles.",feature3Title:"Contact direct",feature3Text:"Commencez une demande via WhatsApp.",visualWork:"Nos réalisations",galleryTitle:"Galerie de projets",galleryText:"Les fichiers présents dans le dossier du site s’afficheront ici.",contactUs:"Contactez-nous",contactTitle:"Parlons de votre projet",contactText:"Choisissez un formulaire ou contactez l’assistant.",wellContact:"Puits d’eau · TECNOPOZOS",wellContactText:"Questions sur le forage et le développement de puits.",openWellForm:"Ouvrir le formulaire puits",boilerContact:"Chaudières à biomasse · KOGUA",boilerContactText:"Questions sur les chaudières et les applications industrielles.",openBoilerForm:"Ouvrir le formulaire chaudières",socialTitle:"Réseaux et localisation",socialNote:"Remplacez les liens d’exemple par vos liens officiels.",footerText:"Solutions techniques pour vos projets.",chatButton:"Chat conseil",send:"Envoyer",chatDisclaimer:"Assistant informatif. Demandez un conseiller pour confirmer les détails techniques.",chatWelcome:"Bonjour ! Je suis l’assistant virtuel de TECNOPOZOS et KOGUA. Quel service vous intéresse ?",chatWell:"Puits d’eau",chatBoiler:"Chaudières à biomasse",chatQuote:"Demander un devis",chatAdvisor:"Parler à un conseiller",askService:"Souhaitez-vous des informations sur les puits d’eau ou les chaudières à biomasse ?",askWhat:"Voulez-vous savoir ce que fait notre entreprise ? Je peux présenter nos services ou vous aider à demander un devis.",wellInfo:"TECNOPOZOS accompagne les projets de forage et de développement de puits. Les exigences dépendent du lieu et du projet.",boilerInfo:"KOGUA propose des chaudières à biomasse pour les applications thermiques industrielles.",chooseFlow:"Que souhaitez-vous faire ?",askCountry:"Dans quel pays et quelle ville le projet aura-t-il lieu ?",askName:"Quel est votre nom ?",askSource:"Comment nous avez-vous connus ? A pour Facebook, B pour Google, ou décrivez une autre source.",askAdvisor:"Quel conseiller préférez-vous ?",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"Autre source",cancel:"Annuler la demande",restart:"Recommencer",unknown:"Je peux donner des informations générales sur les puits d’eau et les chaudières à biomasse.",askServiceType:"Votre demande concerne-t-elle un puits ou une chaudière à biomasse ?",advisorMissing:"Veuillez compléter les informations manquantes.",whatsappIntro:"Bonjour, je souhaite obtenir des conseils pour mon projet.",serviceWellTitle:"DEMANDE DE CONSEIL : PUITS D’EAU",serviceBoilerTitle:"DEMANDE DE CONSEIL : CHAUDIÈRE À BIOMASSE",clientCountry:"Pays/ville",clientName:"Nom",clientSource:"Source de contact",clientService:"Service",clientAdvisor:"Conseiller demandé",openWhatsApp:"Continuer sur WhatsApp",languagePrompt:"Dans quelle langue souhaitez-vous continuer ?",introLanguage:"Choisissez la langue du site et de l’assistant.",languageNote:"Vous pouvez changer de langue avec le bouton Langue.",mediaTitle:"Technologie et expérience pour vos projets"},
+de:{language:"Sprache",topline:"Technische Lösungen für Wasser und Industrie in Guatemala",navHome:"Start",navServices:"Leistungen",navCompany:"Unternehmen",navGallery:"Galerie",navContact:"Kontakt",heroEyebrow:"Erfahrung · Technologie · Vertrauen",heroTitle:"Lösungen für Wasserbrunnen und Biomassekessel",heroText:"Wir unterstützen Ihre Projekte mit technischen Dienstleistungen und Industrielösungen in Guatemala.",seeServices:"Leistungen ansehen",requestAdvisor:"Beratung anfordern",heroMedia:"Technologie und Erfahrung für Ihre Projekte",whatWeDo:"Was wir tun",servicesTitle:"Lösungen für Ihren Bedarf",servicesText:"Wählen Sie eine Leistung, um mehr zu erfahren oder ein Angebot anzufordern.",waterTag:"Wasser",wellsTitle:"Bohrung und Entwicklung von Wasserbrunnen",wellsText:"Technische Orientierung entsprechend den Anforderungen des jeweiligen Projekts.",quoteWell:"Brunnenangebot anfordern",askMore:"Chatbot fragen",industryTag:"Industrie",boilersTitle:"KOGUA-Biomassekessel",boilersText:"Wärmelösungen aus Biomasse für industrielle Prozesse.",quoteBoiler:"Kesselangebot anfordern",ourCompanies:"Unsere Unternehmen",companyTitle:"Technisches Know-how für Projekte",companyText:"Entdecken Sie unsere Leistungen und kontaktieren Sie uns.",companyWellText:"Beratung zur Bohrung und Entwicklung von Wasserbrunnen.",wellForm:"Brunnenformular",companyBoilerText:"Biomassekessel für industrielle Wärmeversorgung.",boilerForm:"Kesselformular",feature1Title:"Persönliche Betreuung",feature1Text:"Wir prüfen Ihren Bedarf und beraten Sie.",feature2Title:"Technischer Fokus",feature2Text:"Klare Informationen zu Ihren Projektoptionen.",feature3Title:"Direkter Kontakt",feature3Text:"Starten Sie eine Beratungsanfrage über WhatsApp.",visualWork:"Unsere Arbeit",galleryTitle:"Projektgalerie",galleryText:"Vorhandene lokale Dateien werden hier angezeigt.",contactUs:"Kontakt",contactTitle:"Sprechen wir über Ihr Projekt",contactText:"Wählen Sie ein Formular oder chatten Sie mit dem Assistenten.",wellContact:"Wasserbrunnen · TECNOPOZOS",wellContactText:"Fragen zu Bohrung und Entwicklung von Brunnen.",openWellForm:"Brunnenformular öffnen",boilerContact:"Biomassekessel · KOGUA",boilerContactText:"Fragen zu Kesseln und industriellen Anwendungen.",openBoilerForm:"Kesselformular öffnen",socialTitle:"Soziale Medien und Standort",socialNote:"Ersetzen Sie Beispiel-URLs durch Ihre offiziellen Links.",footerText:"Technische Lösungen für Ihre Projekte.",chatButton:"Beratungschat",send:"Senden",chatDisclaimer:"Informationsassistent. Technische Details bitte mit einem Berater bestätigen.",chatWelcome:"Hallo! Ich bin der virtuelle Assistent von TECNOPOZOS und KOGUA. Welche Leistung interessiert Sie?",chatWell:"Wasserbrunnen",chatBoiler:"Biomassekessel",chatQuote:"Angebot anfordern",chatAdvisor:"Mit Berater sprechen",askService:"Möchten Sie Informationen zu Wasserbrunnen oder Biomassekesseln?",askWhat:"Möchten Sie wissen, was unser Unternehmen macht? Ich kann unsere Leistungen erklären oder bei einer Angebotsanfrage helfen.",wellInfo:"TECNOPOZOS berät zu Bohrung und Entwicklung von Wasserbrunnen. Die Anforderungen hängen vom Standort und Projekt ab.",boilerInfo:"KOGUA bietet Biomassekessel für industrielle Wärmeanwendungen.",chooseFlow:"Was möchten Sie tun?",askCountry:"In welchem Land und welcher Stadt findet das Projekt statt?",askName:"Wie heißen Sie?",askSource:"Wie sind Sie auf uns aufmerksam geworden? A für Facebook, B für Google oder eine andere Quelle beschreiben.",askAdvisor:"Welchen Berater bevorzugen Sie?",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"Andere Quelle",cancel:"Anfrage abbrechen",restart:"Neu starten",unknown:"Ich kann allgemeine Informationen zu Wasserbrunnen und Biomassekesseln geben.",askServiceType:"Geht es um einen Wasserbrunnen oder einen Biomassekessel?",advisorMissing:"Bitte ergänzen Sie zuerst die fehlenden Angaben.",whatsappIntro:"Hallo, ich bitte um Beratung zu meinem Projekt.",serviceWellTitle:"BERATUNGSANFRAGE: WASSERBRUNNEN",serviceBoilerTitle:"BERATUNGSANFRAGE: BIOMASSEKESSEL",clientCountry:"Land/Stadt",clientName:"Name",clientSource:"Kontaktquelle",clientService:"Leistung",clientAdvisor:"Gewünschter Berater",openWhatsApp:"Auf WhatsApp fortfahren",languagePrompt:"In welcher Sprache möchten Sie fortfahren?",introLanguage:"Wählen Sie die Sprache für Website und Chat.",languageNote:"Sie können die Sprache später über die Schaltfläche Sprache ändern.",mediaTitle:"Technologie und Erfahrung für Ihre Projekte"},
+it:{language:"Lingua",topline:"Soluzioni tecniche per acqua e industria in Guatemala",navHome:"Home",navServices:"Servizi",navCompany:"Aziende",navGallery:"Galleria",navContact:"Contatti",heroEyebrow:"Esperienza · Tecnologia · Fiducia",heroTitle:"Soluzioni per pozzi d’acqua e caldaie a biomassa",heroText:"Supportiamo i tuoi progetti con servizi tecnici e soluzioni industriali in Guatemala.",seeServices:"Scopri i servizi",requestAdvisor:"Richiedi un consulente",heroMedia:"Tecnologia ed esperienza per i tuoi progetti",whatWeDo:"Cosa facciamo",servicesTitle:"Soluzioni per le tue esigenze",servicesText:"Scegli un servizio per saperne di più o richiedere un preventivo.",waterTag:"Acqua",wellsTitle:"Perforazione e sviluppo di pozzi d’acqua",wellsText:"Orientamento tecnico in base alle esigenze e alle condizioni di ogni progetto.",quoteWell:"Preventivo per un pozzo",askMore:"Chiedi al chatbot",industryTag:"Industria",boilersTitle:"Caldaie a biomassa KOGUA",boilersText:"Soluzioni termiche a biomassa per processi industriali.",quoteBoiler:"Preventivo caldaia",ourCompanies:"Le nostre aziende",companyTitle:"Competenza tecnica per diversi progetti",companyText:"Scopri i nostri servizi e contattaci per valutare il tuo progetto.",companyWellText:"Orientamento per perforazione e sviluppo di pozzi d’acqua.",wellForm:"Modulo pozzi",companyBoilerText:"Caldaie a biomassa per esigenze termiche industriali.",boilerForm:"Modulo caldaie",feature1Title:"Assistenza personalizzata",feature1Text:"Valutiamo le tue esigenze e ti orientiamo.",feature2Title:"Approccio tecnico",feature2Text:"Informazioni chiare sulle opzioni del progetto.",feature3Title:"Contatto diretto",feature3Text:"Avvia una richiesta tramite WhatsApp.",visualWork:"Il nostro lavoro",galleryTitle:"Galleria dei progetti",galleryText:"Qui appariranno i file locali presenti nella cartella del sito.",contactUs:"Contattaci",contactTitle:"Parliamo del tuo progetto",contactText:"Scegli un modulo o chatta con l’assistente.",wellContact:"Pozzi d’acqua · TECNOPOZOS",wellContactText:"Domande su perforazione e sviluppo dei pozzi.",openWellForm:"Apri modulo pozzi",boilerContact:"Caldaie a biomassa · KOGUA",boilerContactText:"Domande su caldaie e applicazioni industriali.",openBoilerForm:"Apri modulo caldaie",socialTitle:"Social e posizione",socialNote:"Sostituisci i link di esempio con i tuoi link ufficiali.",footerText:"Soluzioni tecniche per i tuoi progetti.",chatButton:"Chat consulenza",send:"Invia",chatDisclaimer:"Assistente informativo. Per i dettagli tecnici, chiedi a un consulente.",chatWelcome:"Ciao! Sono l’assistente virtuale di TECNOPOZOS e KOGUA. Quale servizio ti interessa?",chatWell:"Pozzi d’acqua",chatBoiler:"Caldaie a biomassa",chatQuote:"Richiedi preventivo",chatAdvisor:"Parla con un consulente",askService:"Vuoi informazioni sui pozzi d’acqua o sulle caldaie a biomassa?",askWhat:"Vuoi sapere cosa fa la nostra azienda? Posso spiegare i servizi o aiutarti a richiedere un preventivo.",wellInfo:"TECNOPOZOS offre orientamento per progetti di perforazione e sviluppo di pozzi. I requisiti dipendono dal luogo e dal progetto.",boilerInfo:"KOGUA offre soluzioni con caldaie a biomassa per applicazioni termiche industriali.",chooseFlow:"Cosa desideri fare?",askCountry:"In quale paese e città si svolgerà il progetto?",askName:"Come ti chiami?",askSource:"Come ci hai conosciuto? A per Facebook, B per Google o descrivi un’altra fonte.",askAdvisor:"Quale consulente preferisci?",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"Altra fonte",cancel:"Annulla richiesta",restart:"Ricomincia",unknown:"Posso fornire informazioni generali su pozzi d’acqua e caldaie a biomassa.",askServiceType:"La richiesta riguarda un pozzo d’acqua o una caldaia a biomassa?",advisorMissing:"Completa prima i dati mancanti.",whatsappIntro:"Ciao, richiedo una consulenza per il mio progetto.",serviceWellTitle:"RICHIESTA DI CONSULENZA: POZZO D’ACQUA",serviceBoilerTitle:"RICHIESTA DI CONSULENZA: CALDAIA A BIOMASSA",clientCountry:"Paese/città",clientName:"Nome",clientSource:"Fonte di contatto",clientService:"Servizio",clientAdvisor:"Consulente richiesto",openWhatsApp:"Continua su WhatsApp",languagePrompt:"In quale lingua desideri continuare?",introLanguage:"Scegli la lingua del sito e dell’assistente.",languageNote:"Puoi cambiare lingua in seguito con il pulsante Lingua.",mediaTitle:"Tecnologia ed esperienza per i tuoi progetti"},
+zh:{language:"语言",topline:"危地马拉水务与工业技术解决方案",navHome:"首页",navServices:"服务",navCompany:"公司",navGallery:"项目展示",navContact:"联系",heroEyebrow:"经验 · 技术 · 信任",heroTitle:"水井与生物质锅炉解决方案",heroText:"我们在危地马拉为项目提供技术服务、工业解决方案和个性化支持。",seeServices:"查看服务",requestAdvisor:"预约顾问",heroMedia:"为您的项目提供技术与经验",whatWeDo:"我们的服务",servicesTitle:"满足您的项目需求",servicesText:"选择服务以了解详情或申请报价。",waterTag:"水务",wellsTitle:"水井钻探与开发",wellsText:"根据项目地点和具体需求提供技术指导。",quoteWell:"申请水井报价",askMore:"咨询聊天机器人",industryTag:"工业",boilersTitle:"KOGUA 生物质锅炉",boilersText:"为工业流程提供生物质热能解决方案。",quoteBoiler:"申请锅炉报价",ourCompanies:"我们的公司",companyTitle:"为不同项目提供专业技术",companyText:"了解我们的服务，并联系我们评估项目需求。",companyWellText:"为供水项目提供水井钻探与开发指导。",wellForm:"水井表单",companyBoilerText:"满足工业热能需求的生物质锅炉解决方案。",boilerForm:"锅炉表单",feature1Title:"个性化服务",feature1Text:"了解需求并提供合适的服务建议。",feature2Title:"技术方案",feature2Text:"清晰介绍项目可选方案。",feature3Title:"直接联系",feature3Text:"通过 WhatsApp 发起咨询。",visualWork:"项目案例",galleryTitle:"项目展示",galleryText:"网站文件夹中已有的本地文件会显示在这里。",contactUs:"联系我们",contactTitle:"讨论您的项目",contactText:"选择表单或通过聊天助手开始咨询。",wellContact:"水井 · TECNOPOZOS",wellContactText:"水井钻探与开发相关咨询。",openWellForm:"打开水井表单",boilerContact:"生物质锅炉 · KOGUA",boilerContactText:"锅炉与工业应用相关咨询。",openBoilerForm:"打开锅炉表单",socialTitle:"社交媒体与位置",socialNote:"如官方链接不同，请替换示例网址。",footerText:"为您的项目提供技术解决方案。",chatButton:"咨询聊天",send:"发送",chatDisclaimer:"信息助手。技术细节请向顾问确认。",chatWelcome:"您好！我是 TECNOPOZOS 和 KOGUA 的虚拟助手。您对哪项服务感兴趣？",chatWell:"水井",chatBoiler:"生物质锅炉",chatQuote:"申请报价",chatAdvisor:"联系顾问",askService:"您想了解水井还是生物质锅炉？",askWhat:"想了解我们公司的业务吗？我可以介绍服务或帮助您申请报价。",wellInfo:"TECNOPOZOS 为水井钻探与开发项目提供指导，具体要求取决于地点和项目条件。",boilerInfo:"KOGUA 为工业热能应用提供生物质锅炉解决方案。",chooseFlow:"您想进行什么操作？",askCountry:"项目将在哪个国家和城市进行？",askName:"请问您的姓名？",askSource:"您通过什么渠道了解到我们？输入 A 表示 Facebook，B 表示 Google，或描述其他渠道。",askAdvisor:"您希望联系哪位顾问？",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"其他渠道",cancel:"取消请求",restart:"重新开始",unknown:"我可以提供水井和生物质锅炉的一般信息，也可以帮助您联系顾问。",askServiceType:"您咨询的是水井还是生物质锅炉？",advisorMissing:"请先填写缺少的信息。",whatsappIntro:"您好，我想为我的项目申请咨询。",serviceWellTitle:"咨询申请：水井",serviceBoilerTitle:"咨询申请：生物质锅炉",clientCountry:"国家/城市",clientName:"姓名",clientSource:"联系渠道",clientService:"服务",clientAdvisor:"指定顾问",openWhatsApp:"继续使用 WhatsApp",languagePrompt:"您希望使用哪种语言？",introLanguage:"选择网站和聊天助手的语言。",languageNote:"之后可通过“语言”按钮更改。",mediaTitle:"为您的项目提供技术与经验"},
+ja:{language:"言語",topline:"グアテマラの水・産業向け技術ソリューション",navHome:"ホーム",navServices:"サービス",navCompany:"会社",navGallery:"ギャラリー",navContact:"お問い合わせ",heroEyebrow:"経験 · 技術 · 信頼",heroTitle:"井戸掘削とバイオマスボイラーのソリューション",heroText:"グアテマラで技術サービス、産業ソリューション、個別サポートを提供します。",seeServices:"サービスを見る",requestAdvisor:"相談を依頼",heroMedia:"プロジェクトを支える技術と経験",whatWeDo:"サービス内容",servicesTitle:"ニーズに合ったソリューション",servicesText:"サービスを選択して詳細確認または見積もりを依頼してください。",waterTag:"水",wellsTitle:"井戸の掘削と開発",wellsText:"プロジェクトの場所や条件に応じた技術的な案内を提供します。",quoteWell:"井戸の見積もり",askMore:"チャットで相談",industryTag:"産業",boilersTitle:"KOGUA バイオマスボイラー",boilersText:"産業プロセス向けのバイオマス熱ソリューションです。",quoteBoiler:"ボイラーの見積もり",ourCompanies:"当社について",companyTitle:"さまざまなプロジェクトを支える技術",companyText:"サービスをご覧いただき、プロジェクトについてお問い合わせください。",companyWellText:"給水プロジェクト向けの井戸掘削・開発に関する案内。",wellForm:"井戸フォーム",companyBoilerText:"産業用熱需要に対応するバイオマスボイラー。",boilerForm:"ボイラーフォーム",feature1Title:"個別サポート",feature1Text:"ニーズを確認し、適切なサービスをご案内します。",feature2Title:"技術重視",feature2Text:"プロジェクトの選択肢をわかりやすく説明します。",feature3Title:"直接連絡",feature3Text:"WhatsApp から相談を開始できます。",visualWork:"施工事例",galleryTitle:"プロジェクトギャラリー",galleryText:"サイトフォルダー内のファイルがここに表示されます。",contactUs:"お問い合わせ",contactTitle:"プロジェクトについて相談する",contactText:"フォームまたはチャットからお問い合わせください。",wellContact:"井戸 · TECNOPOZOS",wellContactText:"井戸の掘削・開発に関するお問い合わせ。",openWellForm:"井戸フォームを開く",boilerContact:"バイオマスボイラー · KOGUA",boilerContactText:"ボイラーや産業用途に関するお問い合わせ。",openBoilerForm:"ボイラーフォームを開く",socialTitle:"SNSと所在地",socialNote:"公式リンクが異なる場合は例のURLを置き換えてください。",footerText:"プロジェクト向け技術ソリューション。",chatButton:"相談チャット",send:"送信",chatDisclaimer:"情報提供アシスタントです。技術詳細は担当者にご確認ください。",chatWelcome:"こんにちは。TECNOPOZOS と KOGUA のバーチャルアシスタントです。どのサービスに関心がありますか？",chatWell:"井戸",chatBoiler:"バイオマスボイラー",chatQuote:"見積もり依頼",chatAdvisor:"担当者と話す",askService:"井戸またはバイオマスボイラーについて知りたいですか？",askWhat:"会社の事業内容を知りたいですか？サービス説明や見積もり依頼をお手伝いします。",wellInfo:"TECNOPOZOS は井戸の掘削・開発プロジェクトを案内します。条件は場所やプロジェクトによって異なります。",boilerInfo:"KOGUA は産業用熱用途向けのバイオマスボイラーを提供します。",chooseFlow:"何をしますか？",askCountry:"プロジェクトの国と都市を教えてください。",askName:"お名前を教えてください。",askSource:"当社をどこで知りましたか？A は Facebook、B は Google、または別の経路を記入してください。",askAdvisor:"希望する担当者を選んでください。",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"その他",cancel:"依頼をキャンセル",restart:"最初から",unknown:"井戸やバイオマスボイラーについて一般的な情報を提供できます。",askServiceType:"井戸とバイオマスボイラーのどちらについての相談ですか？",advisorMissing:"不足している情報を入力してください。",whatsappIntro:"こんにちは。プロジェクトの相談をお願いします。",serviceWellTitle:"相談依頼：井戸",serviceBoilerTitle:"相談依頼：バイオマスボイラー",clientCountry:"国/都市",clientName:"名前",clientSource:"問い合わせ経路",clientService:"サービス",clientAdvisor:"希望担当者",openWhatsApp:"WhatsApp で続ける",languagePrompt:"どの言語で続けますか？",introLanguage:"ウェブサイトとチャットの言語を選択してください。",languageNote:"後で言語ボタンから変更できます。",mediaTitle:"プロジェクトを支える技術と経験"},
+ar:{language:"اللغة",topline:"حلول تقنية للمياه والصناعة في غواتيمالا",navHome:"الرئيسية",navServices:"الخدمات",navCompany:"الشركات",navGallery:"معرض الأعمال",navContact:"اتصل بنا",heroEyebrow:"الخبرة · التقنية · الثقة",heroTitle:"حلول آبار المياه وغلايات الكتلة الحيوية",heroText:"ندعم مشاريعكم بالخدمات التقنية والحلول الصناعية والمساعدة الشخصية في غواتيمالا.",seeServices:"عرض الخدمات",requestAdvisor:"طلب مستشار",heroMedia:"التقنية والخبرة لمشاريعكم",whatWeDo:"ماذا نقدم",servicesTitle:"حلول تناسب احتياجاتكم",servicesText:"اختاروا خدمة لمعرفة المزيد أو طلب عرض سعر.",waterTag:"المياه",wellsTitle:"حفر وتطوير آبار المياه",wellsText:"إرشاد تقني وفق موقع المشروع واحتياجاته.",quoteWell:"طلب عرض سعر لبئر",askMore:"اسأل المساعد",industryTag:"الصناعة",boilersTitle:"غلايات الكتلة الحيوية KOGUA",boilersText:"حلول حرارية بالكتلة الحيوية للعمليات الصناعية.",quoteBoiler:"طلب عرض سعر لغلاية",ourCompanies:"شركاتنا",companyTitle:"خبرة تقنية لمشاريع متنوعة",companyText:"تعرفوا على خدماتنا وتواصلوا معنا لمراجعة متطلبات المشروع.",companyWellText:"إرشاد لحفر وتطوير آبار المياه.",wellForm:"نموذج الآبار",companyBoilerText:"حلول غلايات الكتلة الحيوية للاحتياجات الحرارية الصناعية.",boilerForm:"نموذج الغلايات",feature1Title:"خدمة شخصية",feature1Text:"نراجع احتياجاتكم ونرشدكم إلى الخدمة المناسبة.",feature2Title:"نهج تقني",feature2Text:"معلومات واضحة حول خيارات المشروع.",feature3Title:"اتصال مباشر",feature3Text:"ابدؤوا طلب الاستشارة عبر واتساب.",visualWork:"أعمالنا",galleryTitle:"معرض المشاريع",galleryText:"ستظهر هنا الملفات المحلية الموجودة في مجلد الموقع.",contactUs:"تواصلوا معنا",contactTitle:"لنتحدث عن مشروعكم",contactText:"اختاروا نموذجًا أو تحدثوا مع المساعد لبدء الطلب.",wellContact:"آبار المياه · TECNOPOZOS",wellContactText:"للاستفسار عن حفر الآبار وتطويرها.",openWellForm:"فتح نموذج الآبار",boilerContact:"غلايات الكتلة الحيوية · KOGUA",boilerContactText:"للاستفسار عن الغلايات والتطبيقات الصناعية.",openBoilerForm:"فتح نموذج الغلايات",socialTitle:"الشبكات والموقع",socialNote:"استبدلوا الروابط التجريبية بروابطكم الرسمية إن لزم.",footerText:"حلول تقنية لمشاريعكم.",chatButton:"محادثة استشارية",send:"إرسال",chatDisclaimer:"مساعد معلوماتي. يرجى التواصل مع مستشار لتأكيد التفاصيل التقنية.",chatWelcome:"مرحبًا! أنا المساعد الافتراضي لـ TECNOPOZOS وKOGUA. ما الخدمة التي تهمكم؟",chatWell:"آبار المياه",chatBoiler:"غلايات الكتلة الحيوية",chatQuote:"طلب عرض سعر",chatAdvisor:"التحدث إلى مستشار",askService:"هل ترغبون في معلومات عن آبار المياه أم غلايات الكتلة الحيوية؟",askWhat:"هل ترغبون في معرفة ما تقدمه شركتنا؟ يمكنني شرح الخدمات أو المساعدة في طلب عرض سعر.",wellInfo:"تقدم TECNOPOZOS إرشادًا لمشاريع حفر وتطوير آبار المياه. تختلف المتطلبات حسب الموقع والمشروع.",boilerInfo:"تقدم KOGUA حلول غلايات الكتلة الحيوية للتطبيقات الحرارية الصناعية.",chooseFlow:"ماذا ترغبون أن تفعلوا؟",askCountry:"في أي دولة ومدينة سيكون المشروع؟",askName:"ما اسمكم؟",askSource:"كيف عرفتم عنا؟ اكتبوا A لفيسبوك أو B لجوجل أو صفوا مصدرًا آخر.",askAdvisor:"أي مستشار تفضلون؟",advisorCesar:"César Soto",advisorLuis:"Luis Valdez",advisorEsau:"Esau Leiva",sourceFacebook:"Facebook",sourceGoogle:"Google",sourceOther:"مصدر آخر",cancel:"إلغاء الطلب",restart:"البدء من جديد",unknown:"يمكنني تقديم معلومات عامة عن آبار المياه وغلايات الكتلة الحيوية.",askServiceType:"هل استفساركم عن بئر مياه أم غلاية كتلة حيوية؟",advisorMissing:"يرجى إكمال البيانات الناقصة أولًا.",whatsappIntro:"مرحبًا، أطلب استشارة لمشروعي.",serviceWellTitle:"طلب استشارة: بئر مياه",serviceBoilerTitle:"طلب استشارة: غلاية كتلة حيوية",clientCountry:"الدولة/المدينة",clientName:"الاسم",clientSource:"مصدر التواصل",clientService:"الخدمة",clientAdvisor:"المستشار المطلوب",openWhatsApp:"المتابعة عبر واتساب",languagePrompt:"ما اللغة التي ترغبون في المتابعة بها؟",introLanguage:"اختاروا لغة الموقع والمساعد.",languageNote:"يمكن تغيير اللغة لاحقًا من زر اللغة.",mediaTitle:"التقنية والخبرة لمشاريعكم"}
+};
+const EXTRA_LANGS = {
+ es:{feature1Title:"Atención personalizada",feature1Text:"Revisamos tus necesidades para orientarte hacia el servicio adecuado.",feature2Title:"Enfoque técnico",feature2Text:"Información clara para comprender las alternativas de tu proyecto.",feature3Title:"Contacto directo",feature3Text:"Puedes iniciar una solicitud de asesoría por WhatsApp.",heroMedia:"Tecnología y experiencia para tus proyectos."},
+ en:{feature1Title:"Personalized assistance",feature1Text:"We review your needs and guide you toward the right service.",feature2Title:"Technical approach",feature2Text:"Clear information to help you understand your project options.",feature3Title:"Direct contact",feature3Text:"Start an advisory request through WhatsApp.",heroMedia:"Technology and experience for your projects."},
+ pt:{feature1Title:"Atendimento personalizado",feature1Text:"Analisamos suas necessidades para orientar você.",feature2Title:"Foco técnico",feature2Text:"Informações claras sobre as opções do projeto.",feature3Title:"Contato direto",feature3Text:"Inicie uma solicitação pelo WhatsApp.",heroMedia:"Tecnologia e experiência para seus projetos."},
+ ko:{feature1Title:"맞춤형 상담",feature1Text:"필요 사항을 검토하고 적합한 서비스를 안내합니다.",feature2Title:"기술 중심",feature2Text:"프로젝트 옵션을 이해하기 쉬운 정보로 안내합니다.",feature3Title:"직접 연락",feature3Text:"WhatsApp으로 상담 요청을 시작할 수 있습니다.",heroMedia:"프로젝트를 위한 기술과 경험"},
+ fr:{feature1Title:"Service personnalisé",feature1Text:"Nous étudions vos besoins pour vous orienter.",feature2Title:"Approche technique",feature2Text:"Des informations claires sur les options possibles.",feature3Title:"Contact direct",feature3Text:"Commencez une demande via WhatsApp.",heroMedia:"Technologie et expérience pour vos projets"},
+ de:{feature1Title:"Persönliche Betreuung",feature1Text:"Wir prüfen Ihren Bedarf und beraten Sie.",feature2Title:"Technischer Fokus",feature2Text:"Klare Informationen zu Ihren Projektoptionen.",feature3Title:"Direkter Kontakt",feature3Text:"Starten Sie eine Beratungsanfrage über WhatsApp.",heroMedia:"Technologie und Erfahrung für Ihre Projekte"},
+ it:{feature1Title:"Assistenza personalizzata",feature1Text:"Valutiamo le tue esigenze e ti orientiamo.",feature2Title:"Approccio tecnico",feature2Text:"Informazioni chiare sulle opzioni del progetto.",feature3Title:"Contatto diretto",feature3Text:"Avvia una richiesta tramite WhatsApp.",heroMedia:"Tecnologia ed esperienza per i tuoi progetti"},
+ zh:{feature1Title:"个性化服务",feature1Text:"了解需求并提供合适的服务建议。",feature2Title:"技术方案",feature2Text:"清晰介绍项目可选方案。",feature3Title:"直接联系",feature3Text:"通过 WhatsApp 发起咨询。",heroMedia:"为您的项目提供技术与经验"},
+ ja:{feature1Title:"個別サポート",feature1Text:"ニーズを確認し、適切なサービスをご案内します。",feature2Title:"技術重視",feature2Text:"プロジェクトの選択肢をわかりやすく説明します。",feature3Title:"直接連絡",feature3Text:"WhatsApp から相談を開始できます。",heroMedia:"プロジェクトを支える技術と経験"},
+ ar:{feature1Title:"خدمة شخصية",feature1Text:"نراجع احتياجاتكم ونرشدكم إلى الخدمة المناسبة.",feature2Title:"نهج تقني",feature2Text:"معلومات واضحة حول خيارات المشروع.",feature3Title:"اتصال مباشر",feature3Text:"ابدؤوا طلب الاستشارة عبر واتساب.",heroMedia:"التقنية والخبرة لمشاريعكم"}
+};
+const PAGE_LANGS = {
+es:{enterTecno:"Entrar a TECNOPOZOS →",enterKogua:"Entrar a CALDERAS KOGUA →",backCompanies:"← Volver a las empresas",contactQuoteTitle:"Solicite una cotización personalizada",contactQuoteText:"Elija con quién desea comunicarse. Puede consultar por TECNOPOZOS TPS GUATEMALA o por CALDERAS KOGUA.",formTecno:"Formulario TECNOPOZOS",formKogua:"Formulario CALDERAS KOGUA",wellNeedTitle:"¿Necesita un pozo de agua?",wellNeedText:"Contáctenos para compartir los detalles de su proyecto.",boilerNeedTitle:"¿Busca una solución de biomasa?",boilerNeedText:"Comparta con nosotros las necesidades de su proceso industrial.",chatTitle:"Asistente virtual",chatPlaceholder:"Escribe tu consulta...",introBot:"¡Hola! Puedo orientarte sobre nuestros servicios. ¿Te interesa un pozo de agua o una caldera de biomasa?",helloBot:"¡Hola! Soy el asistente virtual de TECNOPOZOS y KOGUA. ¿Qué servicio te interesa?",askBoiler:"KOGUA ofrece soluciones de calderas de biomasa para aplicaciones térmicas industriales. Para orientarte mejor, cuéntame qué proceso necesita calor o vapor.",askWell:"TECNOPOZOS ofrece orientación para proyectos de perforación y desarrollo de pozos de agua. Para orientarte, dime dónde será el proyecto y para qué necesitas el agua.",askQuote:"Para preparar una cotización, el equipo debe evaluar los requisitos del proyecto. Comparte la ubicación y los detalles técnicos disponibles; no se debe confirmar un precio sin evaluación.",askAdvisorBot:"Puedo ayudarte a contactar a un asesor. Indica el servicio, el país y la ciudad del proyecto, tu nombre y cómo conociste la empresa."},
+en:{enterTecno:"Enter TECNOPOZOS →",enterKogua:"Enter CALDERAS KOGUA →",backCompanies:"← Back to companies",contactQuoteTitle:"Request a personalized quote",contactQuoteText:"Choose whom to contact about TECNOPOZOS TPS GUATEMALA or CALDERAS KOGUA.",formTecno:"TECNOPOZOS form",formKogua:"CALDERAS KOGUA form",wellNeedTitle:"Do you need a watehttps://www.w3schools.com/r well?",wellNeedText:"Contact us to share your project details.",boilerNeedTitle:"Looking for a biomass solution?",boilerNeedText:"Tell us about your industrial process requirements.",chatTitle:"Virtual assistant",chatPlaceholder:"Type your question...",introBot:"Hello! I can guide you through our services. Are you interested in a water well or a biomass boiler?",helloBot:"Hello! I am the TECNOPOZOS and KOGUA virtual assistant. Which service interests you?",askBoiler:"KOGUA provides biomass boiler solutions for industrial heat applications. Tell me what process needs heat or steam so I can guide you.",askWell:"TECNOPOZOS provides guidance for water-well drilling and development projects. Tell me where the project is and what the water will be used for.",askQuote:"To prepare a quote, the team must assess the project requirements. Share the location and available technical details; a price cannot be confirmed without an evaluation.",askAdvisorBot:"I can help you contact an advisor. Share the service, project country and city, your name, and how you heard about the company."},
+pt:{enterTecno:"Entrar na TECNOPOZOS →",enterKogua:"Entrar na CALDERAS KOGUA →",backCompanies:"← Voltar às empresas",contactQuoteTitle:"Solicite um orçamento personalizado",contactQuoteText:"Escolha com quem falar sobre a TECNOPOZOS TPS GUATEMALA ou a CALDERAS KOGUA.",formTecno:"Formulário TECNOPOZOS",formKogua:"Formulário CALDERAS KOGUA",wellNeedTitle:"Precisa de um poço de água?",wellNeedText:"Entre em contato e compartilhe os detalhes do projeto.",boilerNeedTitle:"Procura uma solução de biomassa?",boilerNeedText:"Compartilhe as necessidades do seu processo industrial.",chatTitle:"Assistente virtual",chatPlaceholder:"Digite sua consulta...",introBot:"Olá! Posso orientar você sobre nossos serviços. Precisa de um poço de água ou de uma caldeira de biomassa?",helloBot:"Olá! Sou o assistente virtual da TECNOPOZOS e KOGUA. Qual serviço interessa a você?",askBoiler:"A KOGUA oferece caldeiras de biomassa para aplicações térmicas industriais. Conte qual processo precisa de calor ou vapor.",askWell:"A TECNOPOZOS orienta projetos de perfuração e desenvolvimento de poços. Informe onde será o projeto e para que a água será usada.",askQuote:"Para preparar um orçamento, a equipe precisa avaliar o projeto. Informe a localização e os dados técnicos disponíveis; não é possível confirmar preço sem avaliação.",askAdvisorBot:"Posso ajudar você a contatar um consultor. Informe o serviço, país e cidade do projeto, seu nome e como conheceu a empresa."},
+fr:{enterTecno:"Accéder à TECNOPOZOS →",enterKogua:"Accéder à CALDERAS KOGUA →",backCompanies:"← Retour aux entreprises",contactQuoteTitle:"Demander un devis personnalisé",contactQuoteText:"Choisissez qui contacter au sujet de TECNOPOZOS TPS GUATEMALA ou de CALDERAS KOGUA.",formTecno:"Formulaire TECNOPOZOS",formKogua:"Formulaire CALDERAS KOGUA",wellNeedTitle:"Avez-vous besoin d’un puits d’eau ?",wellNeedText:"Contactez-nous pour présenter les détails de votre projet.",boilerNeedTitle:"Vous cherchez une solution biomasse ?",boilerNeedText:"Présentez-nous les besoins de votre procédé industriel.",chatTitle:"Assistant virtuel",chatPlaceholder:"Écrivez votre question...",introBot:"Bonjour ! Je peux vous guider parmi nos services. Cherchez-vous un puits d’eau ou une chaudière à biomasse ?",helloBot:"Bonjour ! Je suis l’assistant virtuel de TECNOPOZOS et KOGUA. Quel service vous intéresse ?",askBoiler:"KOGUA propose des chaudières à biomasse pour la chaleur industrielle. Quel procédé a besoin de chaleur ou de vapeur ?",askWell:"TECNOPOZOS conseille les projets de forage et de développement de puits. Où se situe le projet et à quoi servira l’eau ?",askQuote:"Pour établir un devis, l’équipe doit évaluer le projet. Indiquez le lieu et les données techniques disponibles ; aucun prix ne peut être confirmé sans évaluation.",askAdvisorBot:"Je peux vous aider à contacter un conseiller. Indiquez le service, le pays et la ville du projet, votre nom et comment vous nous avez connus."},
+de:{enterTecno:"Zu TECNOPOZOS →",enterKogua:"Zu CALDERAS KOGUA →",backCompanies:"← Zurück zu den Unternehmen",contactQuoteTitle:"Individuelles Angebot anfordern",contactQuoteText:"Wählen Sie einen Ansprechpartner für TECNOPOZOS TPS GUATEMALA oder CALDERAS KOGUA.",formTecno:"TECNOPOZOS-Formular",formKogua:"CALDERAS-KOGUA-Formular",wellNeedTitle:"Benötigen Sie einen Wasserbrunnen?",wellNeedText:"Kontaktieren Sie uns mit den Details Ihres Projekts.",boilerNeedTitle:"Suchen Sie eine Biomasselösung?",boilerNeedText:"Teilen Sie uns die Anforderungen Ihres Industrieprozesses mit.",chatTitle:"Virtueller Assistent",chatPlaceholder:"Frage eingeben...",introBot:"Hallo! Ich informiere Sie über unsere Leistungen. Interessieren Sie sich für einen Wasserbrunnen oder einen Biomassekessel?",helloBot:"Hallo! Ich bin der virtuelle Assistent von TECNOPOZOS und KOGUA. Welche Leistung interessiert Sie?",askBoiler:"KOGUA bietet Biomassekessel für industrielle Wärmeanwendungen. Welcher Prozess benötigt Wärme oder Dampf?",askWell:"TECNOPOZOS berät zu Bohrung und Entwicklung von Wasserbrunnen. Wo liegt das Projekt und wofür wird das Wasser benötigt?",askQuote:"Für ein Angebot muss das Team das Projekt bewerten. Teilen Sie Standort und verfügbare technische Daten mit; ohne Prüfung kann kein Preis bestätigt werden.",askAdvisorBot:"Ich helfe Ihnen, einen Berater zu kontaktieren. Nennen Sie Dienstleistung, Land und Stadt, Ihren Namen und wie Sie auf uns aufmerksam wurden."},
+it:{enterTecno:"Entra in TECNOPOZOS →",enterKogua:"Entra in CALDERAS KOGUA →",backCompanies:"← Torna alle aziende",contactQuoteTitle:"Richiedi un preventivo personalizzato",contactQuoteText:"Scegli chi contattare per TECNOPOZOS TPS GUATEMALA o CALDERAS KOGUA.",formTecno:"Modulo TECNOPOZOS",formKogua:"Modulo CALDERAS KOGUA",wellNeedTitle:"Hai bisogno di un pozzo d’acqua?",wellNeedText:"Contattaci e condividi i dettagli del progetto.",boilerNeedTitle:"Cerchi una soluzione a biomassa?",boilerNeedText:"Descrivici le esigenze del tuo processo industriale.",chatTitle:"Assistente virtuale",chatPlaceholder:"Scrivi la tua domanda...",introBot:"Ciao! Posso guidarti tra i nostri servizi. Ti interessa un pozzo d’acqua o una caldaia a biomassa?",helloBot:"Ciao! Sono l’assistente virtuale di TECNOPOZOS e KOGUA. Quale servizio ti interessa?",askBoiler:"KOGUA offre caldaie a biomassa per applicazioni termiche industriali. Quale processo necessita di calore o vapore?",askWell:"TECNOPOZOS offre orientamento per perforazione e sviluppo di pozzi. Dove si trova il progetto e per cosa servirà l’acqua?",askQuote:"Per preparare un preventivo, il team deve valutare il progetto. Indica luogo e dati tecnici disponibili; non è possibile confermare un prezzo senza valutazione.",askAdvisorBot:"Posso aiutarti a contattare un consulente. Indica servizio, paese e città, nome e come hai conosciuto l’azienda."},
+ko:{enterTecno:"TECNOPOZOS 들어가기 →",enterKogua:"CALDERAS KOGUA 들어가기 →",backCompanies:"← 회사 목록으로 돌아가기",contactQuoteTitle:"맞춤 견적 요청",contactQuoteText:"TECNOPOZOS TPS GUATEMALA 또는 CALDERAS KOGUA에 연락할 항목을 선택하세요.",formTecno:"TECNOPOZOS 양식",formKogua:"CALDERAS KOGUA 양식",wellNeedTitle:"우물 시공이 필요하신가요?",wellNeedText:"프로젝트 세부 사항을 알려주세요.",boilerNeedTitle:"바이오매스 솔루션을 찾으시나요?",boilerNeedText:"산업 공정의 요구 사항을 알려주세요.",chatTitle:"가상 상담원",chatPlaceholder:"문의 내용을 입력하세요...",introBot:"안녕하세요! 서비스 안내를 도와드리겠습니다. 우물 또는 바이오매스 보일러 중 어떤 것이 필요하신가요?",helloBot:"안녕하세요! TECNOPOZOS와 KOGUA의 가상 상담원입니다. 어떤 서비스가 필요하신가요?",askBoiler:"KOGUA는 산업용 열 응용을 위한 바이오매스 보일러를 제공합니다. 열이나 증기가 필요한 공정을 알려주세요.",askWell:"TECNOPOZOS는 우물 시추 및 개발 프로젝트를 안내합니다. 프로젝트 위치와 물의 용도를 알려주세요.",askQuote:"견적을 위해 담당팀의 프로젝트 평가가 필요합니다. 위치와 기술 정보를 알려주세요. 평가 전에는 가격을 확정할 수 없습니다.",askAdvisorBot:"상담원 연결을 도와드리겠습니다. 서비스, 국가와 도시, 이름, 회사를 알게 된 경로를 알려주세요."},
+zh:{enterTecno:"进入 TECNOPOZOS →",enterKogua:"进入 CALDERAS KOGUA →",backCompanies:"← 返回企业列表",contactQuoteTitle:"申请个性化报价",contactQuoteText:"请选择要联系的公司：TECNOPOZOS TPS GUATEMALA 或 CALDERAS KOGUA。",formTecno:"TECNOPOZOS 表单",formKogua:"CALDERAS KOGUA 表单",wellNeedTitle:"您需要水井吗？",wellNeedText:"请联系我们并介绍项目详情。",boilerNeedTitle:"正在寻找生物质解决方案？",boilerNeedText:"请告知您的工业流程需求。",chatTitle:"虚拟助手",chatPlaceholder:"输入您的问题...",introBot:"您好！我可以介绍我们的服务。您需要水井还是生物质锅炉？",helloBot:"您好！我是 TECNOPOZOS 和 KOGUA 的虚拟助手。您对哪项服务感兴趣？",askBoiler:"KOGUA 提供用于工业供热的生物质锅炉。请告诉我需要热量或蒸汽的工艺。",askWell:"TECNOPOZOS 为水井钻探和开发项目提供指导。请告知项目地点和用水目的。",askQuote:"报价前需要团队评估项目。请提供地点和现有技术信息；未经评估无法确认价格。",askAdvisorBot:"我可以帮您联系顾问。请提供服务、项目国家和城市、姓名，以及您如何了解到我们。"},
+ja:{enterTecno:"TECNOPOZOSに入る →",enterKogua:"CALDERAS KOGUAに入る →",backCompanies:"← 企業一覧に戻る",contactQuoteTitle:"個別見積もりを依頼",contactQuoteText:"TECNOPOZOS TPS GUATEMALA または CALDERAS KOGUA への連絡先を選んでください。",formTecno:"TECNOPOZOS フォーム",formKogua:"CALDERAS KOGUA フォーム",wellNeedTitle:"井戸が必要ですか？",wellNeedText:"プロジェクトの詳細をお知らせください。",boilerNeedTitle:"バイオマスソリューションをお探しですか？",boilerNeedText:"産業プロセスの要件をお聞かせください。",chatTitle:"バーチャルアシスタント",chatPlaceholder:"お問い合わせを入力...",introBot:"こんにちは。サービスについてご案内します。井戸とバイオマスボイラーのどちらに関心がありますか？",helloBot:"こんにちは。TECNOPOZOS と KOGUA のバーチャルアシスタントです。どのサービスに関心がありますか？",askBoiler:"KOGUA は産業用熱用途向けのバイオマスボイラーを提供します。熱や蒸気が必要な工程を教えてください。",askWell:"TECNOPOZOS は井戸掘削・開発プロジェクトを案内します。プロジェクトの場所と水の用途を教えてください。",askQuote:"見積もりにはプロジェクトの評価が必要です。場所と技術情報をお知らせください。評価前に価格は確定できません。",askAdvisorBot:"担当者への連絡をお手伝いします。サービス、国と都市、お名前、当社を知った経緯を教えてください。"},
+ar:{enterTecno:"الدخول إلى TECNOPOZOS ←",enterKogua:"الدخول إلى CALDERAS KOGUA ←",backCompanies:"العودة إلى الشركات ←",contactQuoteTitle:"طلب عرض سعر مخصص",contactQuoteText:"اختر الجهة التي تريد التواصل معها بشأن TECNOPOZOS TPS GUATEMALA أو CALDERAS KOGUA.",formTecno:"نموذج TECNOPOZOS",formKogua:"نموذج CALDERAS KOGUA",wellNeedTitle:"هل تحتاج إلى بئر مياه؟",wellNeedText:"تواصل معنا وشارك تفاصيل مشروعك.",boilerNeedTitle:"هل تبحث عن حل للكتلة الحيوية؟",boilerNeedText:"شاركنا احتياجات عمليتك الصناعية.",chatTitle:"المساعد الافتراضي",chatPlaceholder:"اكتب استفسارك...",introBot:"مرحبًا! يمكنني إرشادك إلى خدماتنا. هل تحتاج إلى بئر مياه أم غلاية كتلة حيوية؟",helloBot:"مرحبًا! أنا المساعد الافتراضي لـ TECNOPOZOS وKOGUA. ما الخدمة التي تهمك؟",askBoiler:"تقدم KOGUA غلايات الكتلة الحيوية للتطبيقات الحرارية الصناعية. أخبرني بالعملية التي تحتاج إلى حرارة أو بخار.",askWell:"تقدم TECNOPOZOS إرشادًا لمشاريع حفر وتطوير الآبار. أخبرني بموقع المشروع والغرض من استخدام المياه.",askQuote:"يتعين على الفريق تقييم المشروع قبل إعداد عرض السعر. شارك الموقع والمعلومات الفنية المتاحة؛ لا يمكن تأكيد السعر دون تقييم.",askAdvisorBot:"يمكنني مساعدتك في التواصل مع مستشار. اذكر الخدمة والدولة والمدينة واسمك وكيف تعرفت على الشركة."}
+};
+const INTRO_LANGS={
+es:{tecnoIntro:"Brindamos soluciones para el abastecimiento de agua mediante servicios de perforación y desarrollo de pozos, adaptados a los requerimientos de cada proyecto.",koguaIntro:"Fabricación e instalación de calderas de biomasa para aplicaciones industriales, según las necesidades de cada proceso.",tecnoVideoNote:"Video de introducción de TECNOPOZOS TPS GUATEMALA",tecnoPhotoNote:"Imagen de presentación de TECNOPOZOS TPS GUATEMALA.",wellFeature1:"Servicios orientados a proyectos de captación y abastecimiento de agua.",wellFeature2:"Trabajos para apoyar el funcionamiento del pozo según las características del proyecto.",projectFeature:"Comuníquese con nosotros para conversar sobre sus necesidades y solicitar una cotización.",boilerFeature1:"Soluciones térmicas que utilizan biomasa como combustible, según el diseño y las necesidades del proceso.",boilerFeature2:"Equipos concebidos para el ahorro de hasta un 80% en combustibles fósiles.",boilerFeature3:"Consulte con nuestro equipo los requerimientos técnicos de instalación y puesta en marcha."},
+en:{tecnoIntro:"We provide water-supply solutions through well drilling and development services tailored to each project's requirements.",koguaIntro:"We manufacture and install biomass boilers for industrial applications, based on each process's needs.",tecnoVideoNote:"TECNOPOZOS TPS GUATEMALA introduction video",tecnoPhotoNote:"TECNOPOZOS TPS GUATEMALA presentation image.",wellFeature1:"Services for water collection and supply projects.",wellFeature2:"Work to support well performance according to project conditions.",projectFeature:"Contact us to discuss your needs and request a quote.",boilerFeature1:"Thermal solutions using biomass fuel, according to design and process needs.",boilerFeature2:"Equipment designed to save up to 80% on fossil fuels.",boilerFeature3:"Ask our team about technical requirements for installation and commissioning."},
+pt:{tecnoIntro:"Oferecemos soluções de abastecimento de água por meio de serviços de perfuração e desenvolvimento de poços adaptados a cada projeto.",koguaIntro:"Fabricamos e instalamos caldeiras de biomassa para aplicações industriais, conforme as necessidades de cada processo.",tecnoVideoNote:"Vídeo de apresentação da TECNOPOZOS TPS GUATEMALA",tecnoPhotoNote:"Imagem de apresentação da TECNOPOZOS TPS GUATEMALA.",wellFeature1:"Serviços para projetos de captação e abastecimento de água.",wellFeature2:"Trabalhos para apoiar o funcionamento do poço conforme o projeto.",projectFeature:"Entre em contato para conversar sobre suas necessidades e solicitar um orçamento.",boilerFeature1:"Soluções térmicas que utilizam biomassa como combustível, conforme o projeto e o processo.",boilerFeature2:"Equipamentos projetados para economizar até 80% em combustíveis fósseis.",boilerFeature3:"Consulte nossa equipe sobre os requisitos técnicos de instalação e partida."},
+fr:{tecnoIntro:"Nous proposons des solutions d’approvisionnement en eau grâce au forage et au développement de puits adaptés à chaque projet.",koguaIntro:"Nous fabriquons et installons des chaudières à biomasse pour les applications industrielles, selon les besoins du procédé.",tecnoVideoNote:"Vidéo de présentation de TECNOPOZOS TPS GUATEMALA",tecnoPhotoNote:"Image de présentation de TECNOPOZOS TPS GUATEMALA.",wellFeature1:"Services pour les projets de captage et d’approvisionnement en eau.",wellFeature2:"Travaux visant à soutenir le fonctionnement du puits selon le projet.",projectFeature:"Contactez-nous pour discuter de vos besoins et demander un devis.",boilerFeature1:"Solutions thermiques utilisant la biomasse comme combustible selon la conception et le procédé.",boilerFeature2:"Équipements conçus pour économiser jusqu’à 80 % de combustibles fossiles.",boilerFeature3:"Consultez notre équipe sur les exigences techniques d’installation et de mise en service."},
+de:{tecnoIntro:"Wir bieten Wasserversorgungslösungen durch Brunnenbohrung und Brunnenentwicklung, angepasst an die Anforderungen jedes Projekts.",koguaIntro:"Wir fertigen und installieren Biomassekessel für industrielle Anwendungen entsprechend den Prozessanforderungen.",tecnoVideoNote:"Einführungsvideo von TECNOPOZOS TPS GUATEMALA",tecnoPhotoNote:"Präsentationsbild von TECNOPOZOS TPS GUATEMALA.",wellFeature1:"Dienstleistungen für Wassergewinnungs- und Wasserversorgungsprojekte.",wellFeature2:"Arbeiten zur Unterstützung der Brunnenleistung je nach Projektbedingungen.",projectFeature:"Kontaktieren Sie uns, um Ihren Bedarf zu besprechen und ein Angebot anzufordern.",boilerFeature1:"Wärmelösungen mit Biomasse als Brennstoff entsprechend Auslegung und Prozessbedarf.",boilerFeature2:"Anlagen, die bis zu 80 % Einsparung bei fossilen Brennstoffen ermöglichen sollen.",boilerFeature3:"Fragen Sie unser Team nach den technischen Anforderungen für Installation und Inbetriebnahme."},
+it:{tecnoIntro:"Offriamo soluzioni per l’approvvigionamento idrico tramite perforazione e sviluppo di pozzi adattati alle esigenze di ogni progetto.",koguaIntro:"Produciamo e installiamo caldaie a biomassa per applicazioni industriali in base alle esigenze del processo.",tecnoVideoNote:"Video introduttivo di TECNOPOZOS TPS GUATEMALA",tecnoPhotoNote:"Immagine di presentazione di TECNOPOZOS TPS GUATEMALA.",wellFeature1:"Servizi per progetti di captazione e approvvigionamento idrico.",wellFeature2:"Interventi per sostenere il funzionamento del pozzo in base al progetto.",projectFeature:"Contattaci per discutere le tue esigenze e richiedere un preventivo.",boilerFeature1:"Soluzioni termiche che utilizzano biomassa come combustibile secondo progetto e processo.",boilerFeature2:"Apparecchiature progettate per risparmiare fino all’80% di combustibili fossili.",boilerFeature3:"Chiedi al nostro team i requisiti tecnici per installazione e avviamento."},
+ko:{tecnoIntro:"각 프로젝트의 요구에 맞춘 우물 시추 및 개발 서비스를 통해 용수 공급 솔루션을 제공합니다.",koguaIntro:"산업 공정의 요구에 맞춰 바이오매스 보일러를 제조하고 설치합니다.",tecnoVideoNote:"TECNOPOZOS TPS GUATEMALA 소개 영상",tecnoPhotoNote:"TECNOPOZOS TPS GUATEMALA 소개 이미지.",wellFeature1:"취수 및 용수 공급 프로젝트를 위한 서비스입니다.",wellFeature2:"프로젝트 조건에 맞춰 우물의 기능을 지원하는 작업입니다.",projectFeature:"필요 사항을 상담하고 견적을 요청하려면 연락해 주세요.",boilerFeature1:"설계와 공정 요구에 따라 바이오매스를 연료로 사용하는 열 솔루션입니다.",boilerFeature2:"화석 연료를 최대 80% 절감하도록 설계된 장비입니다.",boilerFeature3:"설치 및 시운전에 필요한 기술 요건은 담당팀에 문의하세요."},
+zh:{tecnoIntro:"我们通过水井钻探和开发服务提供供水解决方案，并根据每个项目的要求进行调整。",koguaIntro:"我们根据工业流程需求制造并安装生物质锅炉。",tecnoVideoNote:"TECNOPOZOS TPS GUATEMALA 介绍视频",tecnoPhotoNote:"TECNOPOZOS TPS GUATEMALA 展示图片。",wellFeature1:"为取水和供水项目提供服务。",wellFeature2:"根据项目条件开展维护水井运行的相关工作。",projectFeature:"请联系我们讨论需求并申请报价。",boilerFeature1:"根据设计和流程需求，使用生物质燃料提供热能解决方案。",boilerFeature2:"设备设计目标是最多节省 80% 的化石燃料。",boilerFeature3:"请向团队咨询安装和调试的技术要求。"},
+ja:{tecnoIntro:"各プロジェクトの要件に合わせた井戸掘削・開発サービスを通じて給水ソリューションを提供します。",koguaIntro:"各産業プロセスのニーズに合わせてバイオマスボイラーを製造・設置します。",tecnoVideoNote:"TECNOPOZOS TPS GUATEMALA 紹介動画",tecnoPhotoNote:"TECNOPOZOS TPS GUATEMALA 紹介画像。",wellFeature1:"取水・給水プロジェクト向けのサービスです。",wellFeature2:"プロジェクト条件に応じて井戸の機能を支える作業です。",projectFeature:"ニーズの相談や見積もり依頼はお問い合わせください。",boilerFeature1:"設計と工程の要件に応じてバイオマスを燃料とする熱ソリューションです。",boilerFeature2:"化石燃料を最大80%削減することを目指した設備です。",boilerFeature3:"設置・試運転の技術要件は担当チームにご相談ください。"},
+ar:{tecnoIntro:"نقدم حلول إمداد المياه من خلال خدمات حفر الآبار وتطويرها بما يتناسب مع متطلبات كل مشروع.",koguaIntro:"نصنع ونركب غلايات الكتلة الحيوية للتطبيقات الصناعية وفق احتياجات كل عملية.",tecnoVideoNote:"فيديو تعريفي بـ TECNOPOZOS TPS GUATEMALA",tecnoPhotoNote:"صورة تعريفية بـ TECNOPOZOS TPS GUATEMALA.",wellFeature1:"خدمات لمشاريع استخراج المياه وإمدادها.",wellFeature2:"أعمال لدعم أداء البئر وفق ظروف المشروع.",projectFeature:"تواصل معنا لمناقشة احتياجاتك وطلب عرض سعر.",boilerFeature1:"حلول حرارية تستخدم الكتلة الحيوية وقودًا وفق التصميم واحتياجات العملية.",boilerFeature2:"معدات مصممة لتوفير ما يصل إلى 80٪ من الوقود الأحفوري.",boilerFeature3:"استشر فريقنا بشأن المتطلبات الفنية للتركيب والتشغيل."}
+};
+Object.keys(INTRO_LANGS).forEach(lang=>Object.assign(LANGS[lang]||{},INTRO_LANGS[lang]));
+const DETAIL_LANGS={
+es:{developWellsTitle:"Desarrollo de pozos",projectSupportTitle:"Atención a proyectos",manufacturingTitle:"Fabricación",installationTitle:"Instalación",quoteForm:"Formulario de cotización",koguaVideoNote:"Video de introducción de CALDERAS KOGUA",koguaPhotoNote:"Fotografía de presentación de CALDERAS KOGUA."},
+en:{developWellsTitle:"Well development",projectSupportTitle:"Project support",manufacturingTitle:"Manufacturing",installationTitle:"Installation",quoteForm:"Quote request form",koguaVideoNote:"CALDERAS KOGUA introduction video",koguaPhotoNote:"CALDERAS KOGUA presentation photo."},
+pt:{developWellsTitle:"Desenvolvimento de poços",projectSupportTitle:"Apoio a projetos",manufacturingTitle:"Fabricação",installationTitle:"Instalação",quoteForm:"Formulário de orçamento",koguaVideoNote:"Vídeo de apresentação da CALDERAS KOGUA",koguaPhotoNote:"Foto de apresentação da CALDERAS KOGUA."},
+fr:{developWellsTitle:"Développement de puits",projectSupportTitle:"Accompagnement de projets",manufacturingTitle:"Fabrication",installationTitle:"Installation",quoteForm:"Formulaire de devis",koguaVideoNote:"Vidéo de présentation de CALDERAS KOGUA",koguaPhotoNote:"Photo de présentation de CALDERAS KOGUA."},
+de:{developWellsTitle:"Brunnenentwicklung",projectSupportTitle:"Projektbetreuung",manufacturingTitle:"Fertigung",installationTitle:"Installation",quoteForm:"Angebotsformular",koguaVideoNote:"Einführungsvideo von CALDERAS KOGUA",koguaPhotoNote:"Präsentationsfoto von CALDERAS KOGUA."},
+it:{developWellsTitle:"Sviluppo dei pozzi",projectSupportTitle:"Supporto ai progetti",manufacturingTitle:"Produzione",installationTitle:"Installazione",quoteForm:"Modulo per preventivo",koguaVideoNote:"Video introduttivo di CALDERAS KOGUA",koguaPhotoNote:"Foto di presentazione di CALDERAS KOGUA."},
+ko:{developWellsTitle:"우물 개발",projectSupportTitle:"프로젝트 지원",manufacturingTitle:"제조",installationTitle:"설치",quoteForm:"견적 요청 양식",koguaVideoNote:"CALDERAS KOGUA 소개 영상",koguaPhotoNote:"CALDERAS KOGUA 소개 사진."},
+zh:{developWellsTitle:"水井开发",projectSupportTitle:"项目支持",manufacturingTitle:"制造",installationTitle:"安装",quoteForm:"报价申请表",koguaVideoNote:"CALDERAS KOGUA 介绍视频",koguaPhotoNote:"CALDERAS KOGUA 展示照片。"},
+ja:{developWellsTitle:"井戸の開発",projectSupportTitle:"プロジェクト支援",manufacturingTitle:"製造",installationTitle:"設置",quoteForm:"見積もりフォーム",koguaVideoNote:"CALDERAS KOGUA 紹介動画",koguaPhotoNote:"CALDERAS KOGUA 紹介写真。"},
+ar:{developWellsTitle:"تطوير الآبار",projectSupportTitle:"دعم المشاريع",manufacturingTitle:"التصنيع",installationTitle:"التركيب",quoteForm:"نموذج طلب عرض سعر",koguaVideoNote:"فيديو تعريفي بـ CALDERAS KOGUA",koguaPhotoNote:"صورة تعريفية بـ CALDERAS KOGUA."}
+};
+Object.keys(DETAIL_LANGS).forEach(lang=>Object.assign(LANGS[lang]||{},DETAIL_LANGS[lang]));
+Object.keys(PAGE_LANGS).forEach(lang=>Object.assign(LANGS[lang]||{},PAGE_LANGS[lang]));
+
+Object.keys(EXTRA_LANGS).forEach(lang=>Object.assign(LANGS[lang]||{},EXTRA_LANGS[lang]));
+let currentLang = "es";
+function tr(key){return (LANGS[currentLang] && LANGS[currentLang][key]) || LANGS.es[key] || key;}
+function setLanguage(lang){
+  currentLang = LANGS[lang] ? lang : "es";
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (tr(key)) {
+      if (key === "chatTitle") { el.childNodes[0].textContent = tr(key); }
+      else el.textContent = tr(key);
+    }
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>el.placeholder=tr(el.dataset.i18nPlaceholder));
+  document.querySelectorAll("[data-i18n-aria]").forEach(el=>el.setAttribute('aria-label',tr(el.dataset.i18nAria)));
+  try { localStorage.setItem('tpsSiteLanguage', currentLang); } catch(e) {}
+  document.querySelectorAll('a[href^="contacto.html"]').forEach(link => {
+    link.href = 'contacto.html?lang=' + encodeURIComponent(currentLang);
+  });
+  const launch=document.getElementById('chatLaunch'); if(launch) launch.setAttribute('aria-label',tr('chatButton'));
+  const chatBox=document.getElementById('chatBox'); if(chatBox) chatBox.setAttribute('aria-label',tr('chatTitle'));
+  const input=document.getElementById('chatInput'); if(input) input.setAttribute('aria-label',tr('chatPlaceholder'));
+  const messages=document.getElementById('chatMessages'); if(messages && messages.children.length===1 && !messages.dataset.userStarted) messages.children[0].textContent=tr('introBot');
+  if (typeof showChatOptions === 'function') showChatOptions();
+  document.getElementById("languageTitle").textContent = tr("languagePrompt");
+  document.getElementById("languageIntro").textContent = tr("introLanguage");
+  document.getElementById("languageNote").textContent = tr("languageNote");
+  document.getElementById("changeLanguage").textContent = "🌐 " + tr("language");
+  document.getElementById("languageOverlay").style.display = "none";
+}
+function openLanguage(){document.getElementById("languageOverlay").style.display = "flex";}
+document.getElementById("languageGrid").addEventListener("click", e => {
+  const btn = e.target.closest("[data-lang]");
+  if (btn) setLanguage(btn.dataset.lang);
+});
+function showHome(){
+  document.getElementById('homeView').classList.remove('hidden');
+  document.getElementById('tecnoView').classList.add('hidden');
+  document.getElementById('koguaView').classList.add('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function showCompany(which){
+  document.getElementById('homeView').classList.add('hidden');
+  document.getElementById('tecnoView').classList.toggle('hidden',which!=='tecno');
+  document.getElementById('koguaView').classList.toggle('hidden',which!=='kogua');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleChat(){
+  document.getElementById('chatBox').classList.toggle('hidden');
+  if(!document.getElementById('chatBox').classList.contains('hidden')){
+    document.getElementById('chatInput').focus();
+  }
+}
+function addBubble(text,who='bot'){
+  const d=document.createElement('div');
+  d.className='bubble'+(who==='user'?' user':'');
+  d.textContent=text;
+  const box=document.getElementById('chatMessages');
+  box.appendChild(d);
+  box.scrollTop=box.scrollHeight;
+}
+let advisorFlow=null;
+let advisorData={};
+const ADVISORS={cesar:{name:'César Soto',phone:'50241516624'},luis:{name:'Luis Valdez',phone:'50236457727'},esau:{name:'Esau Leiva',phone:'50249085629'}};
+function clearQuick(){const q=document.querySelector('.quick');if(q)q.innerHTML='';}
+function quickButton(label,fn){const q=document.querySelector('.quick');const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',fn);q.appendChild(b);}
+function showChatOptions(){const q=document.querySelector('.quick');q.innerHTML='';quickButton(tr('chatWell'),()=>{addBubble(tr('chatWell'),'user');addBubble(tr('askWell'));});quickButton(tr('chatBoiler'),()=>{addBubble(tr('chatBoiler'),'user');addBubble(tr('askBoiler'));});quickButton(tr('chatQuote')+' / '+tr('chatAdvisor'),()=>startAdvisorFlow(''));}
+function localAnswer(message){
+  const m=message.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  if(/^(hola|buenas|buenos dias|buenas tardes|buenas noches|hey|hello|hi|bonjour|ciao|hallo|ol[aá]|こんにちは|안녕|你好|مرحبا)/.test(m)) return tr('helloBot');
+  if(/asesor|asesora|persona|humano|hablar con alguien|contactar|contactarme|advisor|consultant/.test(m)) return tr('askAdvisorBot');
+  if(/cotiz|precio|costo|presupuesto|cuanto cuesta|quote|estimate|or[cç]amento|devis|angebot|preventivo|見積|报价|سعر/.test(m)) return tr('askQuote')+'\n\n'+tr('askAdvisorBot');
+  if(/caldera|biomasa|vapor|termic|boiler|kogua|combustion|combustible/.test(m)) return tr('askBoiler');
+  if(/pozo|agua|perfor|well|water|bomba|nivel de agua|caudal|profundidad|puits|brunnen|pozzo|우물|水井|بئر/.test(m)) return tr('askWell');
+  if(/que hacen|qué hacen|servicios|empresa|informacion|información|ayuda|solucion|solución|recomiend|service|servicio/.test(m)) return tr('askWhat');
+  if(/ubicacion|ubicación|ciudad|municipio|pais|país|location|where/.test(m)) return tr('askCountry');
+  return tr('unknown')+' '+tr('askService');
+}
+function startAdvisorFlow(service){
+ advisorData={service:service||'',country:'',name:'',source:'',advisor:''};
+ advisorFlow=advisorData.service?'country':'service';
+ clearQuick();
+ if(advisorFlow==='service'){
+   addBubble(tr('askServiceType'));
+   quickButton(tr('chatWell'),()=>{advisorData.service=tr('chatWell');advisorFlow='country';addBubble(tr('chatWell'),'user');addBubble(tr('askCountry'));clearQuick();});
+   quickButton(tr('chatBoiler'),()=>{advisorData.service=tr('chatBoiler');advisorFlow='country';addBubble(tr('chatBoiler'),'user');addBubble(tr('askCountry'));clearQuick();});
+ }else addBubble(tr('askCountry'));
+}
+function renderAdvisorOptions(){
+ clearQuick();
+ [['cesar',tr('advisorCesar')],['luis',tr('advisorLuis')],['esau',tr('advisorEsau')]].forEach(([id,label])=>quickButton(label,()=>selectAdvisor(id)));
+ quickButton(tr('cancel'),()=>{advisorFlow=null;advisorData={};addBubble(tr('unknown'));showChatOptions();});
+}
+function selectAdvisor(id){
+ const a=ADVISORS[id];advisorData.advisor=a.name;advisorFlow=null;
+ const msg=[tr('whatsappIntro'),tr('clientAdvisor')+': '+a.name,tr('clientCountry')+': '+advisorData.country,tr('clientName')+': '+advisorData.name,tr('clientService')+': '+advisorData.service,tr('clientSource')+': '+advisorData.source].join('\n');
+ const link='https://wa.me/'+a.phone+'?text='+encodeURIComponent(msg);
+ addBubble(tr('askContactConfirm')+' '+tr('clientAdvisor')+': '+a.name);
+ clearQuick();const q=document.querySelector('.quick');const go=document.createElement('a');go.className='btn primary';go.href=link;go.target='_blank';go.rel='noopener';go.textContent=tr('openWhatsApp')+' · '+a.name;go.style.textDecoration='none';q.appendChild(go);quickButton(tr('restart'),()=>{advisorFlow=null;advisorData={};showChatOptions();addBubble(tr('chatWelcome'));});
+}
+function handleAdvisorAnswer(message){
+ const answer=message.trim();
+ if(advisorFlow==='service'){const m=answer.toLowerCase();advisorData.service=/caldera|biomasa|boiler|kogua/.test(m)?'Calderas de biomasa':/pozo|agua|perfor|well/.test(m)?'Pozos de agua':'';if(!advisorData.service){addBubble(tr('askServiceType'));return;}advisorFlow='country';addBubble(tr('askCountry'));clearQuick();return;}
+ if(advisorFlow==='country'){advisorData.country=answer;advisorFlow='name';addBubble(tr('askName'));return;}
+ if(advisorFlow==='name'){advisorData.name=answer;advisorFlow='source';addBubble(tr('askSource'));return;}
+ if(advisorFlow==='source'){const n=answer.toLowerCase();advisorData.source=(n==='a'||n.includes('facebook'))?'Facebook':(n==='b'||n.includes('google'))?'Google':answer;advisorFlow='advisor';addBubble(tr('askAdvisor'));renderAdvisorOptions();return;}
+}
+async function sendMessage(message){
+  if(!message.trim())return;
+  addBubble(message,'user');
+  document.getElementById('chatInput').value='';
+  if(advisorFlow){
+    handleAdvisorAnswer(message);
+    return;
+  }
+  if(/asesor|asesora|persona|humano|hablar con alguien|que me contacten|contactenme|contactarme/i.test(message)){
+    startAdvisorFlow();
+    return;
+  }
+  addBubble(localAnswer(message));
+}
+function quickAsk(message){
+  sendMessage(message);
+}
+document.getElementById('chatForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  sendMessage(document.getElementById('chatInput').value);
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+showChatOptions();
+try {
+  const urlLang = (new URLSearchParams(window.location.search).get('lang') || '').toLowerCase().split('-')[0];
+  const savedLang = localStorage.getItem('tpsSiteLanguage');
+  if (urlLang && LANGS[urlLang]) setLanguage(urlLang);
+  else if (savedLang && LANGS[savedLang]) setLanguage(savedLang);
+  else setLanguage(currentLang);
+} catch(e) { setLanguage(currentLang); }
+window.addEventListener('load',()=>{const v=document.getElementById('introVideo');if(v){v.addEventListener('error',()=>{v.style.display='none';const cap=document.getElementById('heroMediaCaption');if(cap)cap.textContent='Añade intro.mp4 e imagen_intro.jpg a la carpeta del sitio para mostrar el video de presentación.';});setTimeout(()=>{if(v.readyState===0){v.style.display='none';}},1800);}});
+</script>
+</body>
+</html>
